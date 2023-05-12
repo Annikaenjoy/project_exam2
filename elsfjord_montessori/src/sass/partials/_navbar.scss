@@ -1,0 +1,63 @@
+.navbar {
+  background-color: $color-white;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.1);
+}
+.navbar-position {
+  width: 100%;
+  justify-content: flex-end;
+}
+.logo {
+  width: 200px;
+  height: auto;
+  margin-left: 20px;
+}
+.navbar-toggler {
+  margin-right: 20px;
+  border: none;
+}
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+  text-decoration: none;
+}
+.navbar-toggler-icon {
+  width: 40px;
+}
+.nav_link {
+  margin-right: 5px;
+  font-family: $font-primary;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 15px;
+  color: $color-black !important;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav_link:hover {
+  color: $color-white !important;
+  text-decoration: none;
+  background-color: $color-secondary;
+}
+
+.nav_link_profile:hover {
+  color: $color-white !important;
+}
+
+// .logout {
+//   background-color: transparent;
+//   border: 2px solid $color-white;
+//   padding: 2px 6px;
+//   font-family: $font-primary;
+//   font-size: 16px;
+//   font-weight: 500;
+//   padding: 20px;
+//   color: $color-white !important;
+//   cursor: pointer;
+// }
+@media (min-width: 992px) {
+  .nav_link:hover {
+    color: $color-primary !important;
+    background-color: $color-white;
+  }
+}

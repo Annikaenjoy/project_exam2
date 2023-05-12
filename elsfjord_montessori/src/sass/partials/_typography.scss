@@ -1,0 +1,51 @@
+h1 {
+  font-family: $font-secondary;
+  font-size: 36px;
+  color: $color-black;
+  margin: 40px;
+  text-align: center;
+}
+h2 {
+  font-family: $font-primary;
+  font-size: 28px;
+  text-transform: uppercase;
+  color: $color-black;
+  font-weight: 700;
+}
+h3 {
+  font-family: $font-primary;
+  font-size: 18px;
+  font-weight: 600;
+  color: $color-black;
+  margin-top: 20px;
+}
+
+a {
+  color: $color-link;
+  text-decoration: none;
+  font-family: $font-primary;
+  font-size: 14px;
+}
+p {
+  font-family: $font-primary;
+  font-size: 16px;
+  font-weight: 400;
+}
+li {
+  font-family: $font-primary;
+  font-size: 16px;
+  font-weight: 400;
+}
+footer,
+p {
+  font-family: $font-primary;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  list-style-type: none;
+}
+@media (min-width: 992px) {
+  h1 {
+    font-size: 48px;
+  }
+}
