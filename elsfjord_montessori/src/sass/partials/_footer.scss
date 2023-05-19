@@ -1,0 +1,40 @@
+.fa_icon1 {
+  font-size: 30px;
+  margin: 0px;
+}
+
+h5 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.footer_link {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: $font-primary;
+  font-size: 16px;
+  font-weight: 400;
+  color: $color-white;
+  margin-top: 10px;
+}
+.footer_link:hover {
+  color: $color-white;
+  font-weight: 500;
+}
+.contact_links {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  color: $color-white;
+}
+.contact_adress {
+  margin-top: 20px;
+}
+.line {
+  margin: 20px 0 0 0;
+  width: 100%;
+  border-top: 0.5px solid $color-white;
+}
+
+.copyright {
+  margin: 15px;
+  text-align: end;
+}

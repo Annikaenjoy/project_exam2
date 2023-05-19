@@ -19,6 +19,25 @@ h3 {
   color: $color-black;
   margin-top: 20px;
 }
+h4 {
+  font-family: $font-primary;
+  font-size: 16px;
+  font-weight: 600;
+  color: $color-white;
+  text-transform: uppercase;
+}
+h5 {
+  font-family: $font-primary;
+  font-size: 18px;
+  font-weight: 700;
+  color: $color-white;
+}
+h6 {
+  font-family: $font-primary;
+  font-size: 16px;
+  font-weight: 600;
+  color: $color-white;
+}
 
 a {
   color: $color-link;

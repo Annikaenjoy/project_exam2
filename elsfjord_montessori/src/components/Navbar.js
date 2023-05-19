@@ -21,22 +21,22 @@ const NavBar = (props) => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="navbar-position ml-auto">
-              <Link className="nav_link" exact to="/">
+              <Link className="nav_link" to="/">
                 Forside
               </Link>{" "}
-              <Link className="nav_link" exact to="/omoss">
+              <Link className="nav_link" to="/omoss">
                 Om oss
               </Link>
-              <Link className="nav_link" exact to="/montessori">
+              <Link className="nav_link" to="/montessori">
                 Montessori
               </Link>
-              <Link className="nav_link" exact to="/news">
+              <Link className="nav_link" to="/news">
                 Aktuelt
               </Link>
               <Link className="nav_link" to="/apply">
                 Søk skoleplass
               </Link>
-              <Link className="nav_link" exact to="/kontakt">
+              <Link className="nav_link" to="/kontakt">
                 Kontakt
               </Link>
               <Link className="nav_link" to="/admin">

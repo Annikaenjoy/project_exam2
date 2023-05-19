@@ -37,7 +37,8 @@ const BlogPosts = (props) => {
     <div>
       {posts.map((post) => (
         <div>
-          <h2>{post.title.rendered}</h2>
+          <p>{post.date}</p>
+          <h2 key={post.id}>{post.title.rendered}</h2>
         </div>
       ))}
     </div>
