@@ -1,7 +1,23 @@
+.section_container {
+  margin-top: 50px;
+}
+
 .section_col {
   text-align: end;
   align-self: center;
 }
 .section_img {
   width: 400px;
+}
+button {
+  border: none;
+  background-color: $color-primary;
+  color: $color-white;
+  padding: 15px;
+  width: 250px;
+  font-size: 18px;
+  font-weight: 400;
+}
+button:hover {
+  background-color: $color-secondary;
 }

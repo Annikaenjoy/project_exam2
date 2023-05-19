@@ -7,6 +7,7 @@ import RecentPosts from "../components/RecentPosts";
 import Footer from "../components/Footer";
 import Paragraph from "../components/Paragraph";
 import WeOffer from "../components/WeOffer";
+import ApplySection from "../components/ApplySection";
 
 const Home = (props) => {
   return (
@@ -24,7 +25,7 @@ const Home = (props) => {
       </Paragraph>
       <RecentPosts />
       <WeOffer />
-
+      <ApplySection />
       <Footer />
     </>
   );
