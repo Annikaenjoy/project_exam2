@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 import NavBar from "../components/Navbar";
 import HeaderImage from "../components/HeaderImage";
@@ -10,6 +11,10 @@ import WeOffer from "../components/WeOffer";
 import ApplySection from "../components/ApplySection";
 
 const Home = (props) => {
+  let navigate = useNavigate();
+  const navigateAbout = () => {
+    navigate("/omoss");
+  };
   return (
     <>
       <NavBar />
@@ -22,6 +27,9 @@ const Home = (props) => {
         til skole. Her har vi fokus på trivsel, kvalitet, og et godt
         læringsmiljø, hvor alle barn er velkommen, også de som tilhører en annen
         skolekrets enn Elsfjord og omegn.
+        <button className="about_btn" onClick={navigateAbout}>
+          Les mer om oss
+        </button>
       </Paragraph>
       <RecentPosts />
       <WeOffer />

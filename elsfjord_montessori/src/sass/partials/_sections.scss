@@ -1,10 +1,14 @@
 .section_container {
   margin-top: 50px;
+  height: 100%;
 }
 
 .section_col {
   text-align: end;
   align-self: center;
+}
+.h2 {
+  margin-top: 20px;
 }
 .section_img {
   width: 400px;
@@ -20,4 +24,7 @@ button {
 }
 button:hover {
   background-color: $color-secondary;
+}
+.about_btn {
+  margin-top: 20px;
 }

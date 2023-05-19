@@ -12,7 +12,7 @@ const WeOffer = () => {
   return (
     <>
       <Container className="section_container">
-        <Row className="justify-content-center">
+        <Row className="justify-content-center align-items-center">
           <Col xs={10} md={6}>
             <h2>Vi tilbyr:</h2>
             <p>
