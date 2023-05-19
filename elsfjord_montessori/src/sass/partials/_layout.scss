@@ -17,6 +17,37 @@ body {
   width: 100%;
   margin: 0 auto;
 }
+.intro {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+.quote {
+  font-family: $font-primary;
+  color: $color-black;
+  font-size: 18px;
+  padding: 20px;
+  border-radius: 20%;
+  margin: 20px;
+}
+.bqstart {
+  font-family: $font-secondary;
+  float: left;
+  height: 45px;
+  margin-top: -60px;
+  margin-left: -40px;
+  margin-bottom: -50px;
+  font-size: 700%;
+  color: $color-secondary;
+}
+.bqend {
+  font-family: $font-secondary;
+  float: right;
+  height: 25px;
+  margin-top: -30px;
+  font-size: 700%;
+  color: $color-secondary;
+}
 footer {
   background: $color-footer;
   color: $color-white;
