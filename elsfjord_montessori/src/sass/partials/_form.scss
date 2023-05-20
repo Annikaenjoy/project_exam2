@@ -25,6 +25,9 @@ form {
   border: none;
   margin-top: 10px;
 }
+.form_btn:hover {
+  background-color: $color-secondary;
+}
 .form_error {
   font-size: 14px;
   color: #ff0000;

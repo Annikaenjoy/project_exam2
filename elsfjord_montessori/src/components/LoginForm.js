@@ -78,7 +78,7 @@ const LoginForm = (props) => {
             )}
           </div>
           <button className="form_btn">
-            {submitting ? "Loggin in..." : "Login"}
+            {submitting ? "Logger inn..." : "Logg inn"}
           </button>
         </fieldset>
       </form>
