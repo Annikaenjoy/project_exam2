@@ -6,14 +6,20 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import FormError from "../common/FormError";
 
+// React Bootstrap
+import Image from "react-bootstrap/Image";
+
+// Images
+import Logo from "../assets/img/Logo_farget.png";
+
 // API
 import { baseUrl, TOKEN_PATH } from "../constants/Api";
 
 const url = baseUrl + TOKEN_PATH;
 
 const schema = yup.object().shape({
-  username: yup.string().required("Please enter your username"),
-  password: yup.string().required("Please enter your password"),
+  username: yup.string().required("Skriv inn brukernavn"),
+  password: yup.string().required("Skriv inn passord"),
 });
 const LoginForm = (props) => {
   const [submitting, setSubmitting] = useState(false);
@@ -43,6 +49,7 @@ const LoginForm = (props) => {
   }
   return (
     <>
+      <Image className="login_image" src={Logo} />
       <form onSubmit={handleSubmit(onSubmit)}>
         {loginError && <FormError>{loginError}</FormError>}
         <fieldset disabled={submitting}>
@@ -50,7 +57,7 @@ const LoginForm = (props) => {
             <input
               className="form_input"
               name="username"
-              placeholder="Username"
+              placeholder="Brukernavn"
               {...register("username")}
             />
             {errors.username && (
@@ -62,7 +69,7 @@ const LoginForm = (props) => {
             <input
               className="form_input"
               name="password"
-              placeholder="Password"
+              placeholder="Passord"
               {...register("password")}
               type="password"
             />
@@ -70,7 +77,7 @@ const LoginForm = (props) => {
               <FormError>{errors.password.message}</FormError>
             )}
           </div>
-          <button className="form-button">
+          <button className="form_btn">
             {submitting ? "Loggin in..." : "Login"}
           </button>
         </fieldset>
