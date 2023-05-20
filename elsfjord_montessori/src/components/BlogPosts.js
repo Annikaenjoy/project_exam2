@@ -44,9 +44,8 @@ const BlogPosts = (props) => {
       {posts.map((post) => (
         <Container>
           <Row>
-            <Col>
+            <Col md={4}>
               <Card style={{ width: "18rem" }}>
-                {/* <Card.Img variant="top" src={post.featured_media.href} /> */}
                 <Card.Body>
                   <p>{post.date}</p>
                   <Card.Title key={post.id}>{post.title.rendered}</Card.Title>

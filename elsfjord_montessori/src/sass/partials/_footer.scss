@@ -7,6 +7,9 @@ h5 {
   margin-top: 50px;
   margin-bottom: 20px;
 }
+.margin_footer {
+  margin-top: 300px;
+}
 .footer_link {
   display: flex;
   flex-wrap: wrap;
@@ -37,4 +40,10 @@ h5 {
 .copyright {
   margin: 15px;
   text-align: end;
+}
+
+@media (min-width: 992px) {
+  .margin_footer {
+    margin-top: 50px;
+  }
 }

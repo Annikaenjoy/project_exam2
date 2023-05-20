@@ -34,7 +34,7 @@ const NavBar = (props) => {
                 Aktuelt
               </Link>
               <Link className="nav_link" to="/apply">
-                Søk skoleplass
+                Skoleplass
               </Link>
               <Link className="nav_link" to="/kontakt">
                 Kontakt

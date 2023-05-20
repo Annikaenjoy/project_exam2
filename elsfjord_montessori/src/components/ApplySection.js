@@ -16,14 +16,14 @@ const ApplySection = () => {
   };
   return (
     <>
-      <Container className="section_container">
+      <Container fluid className="section_container">
         <Row className="justify-content-center align-items-center">
           <Col xs={10} md={12} lg={6}>
             <img className="section_img" src={TallMaterialer} />
           </Col>{" "}
           <Col xs={10} md={12} lg={6}>
-            <h2 className="h2">Søknad om skoleplass</h2>
-            <h3>Søknadsfrist, prosess og antall</h3>
+            <h2 className="h2_margin">Søknad om skoleplass</h2>
+            <h4>Søknadsfrist, prosess og antall</h4>
             <p>
               Søknadsfrist til hovedopptak for skoleåret 2023/2024 er 1. mars
               2023. Vi tar i mot søknader etter søknadsfristen til
@@ -35,7 +35,9 @@ const ApplySection = () => {
               av skolen. Søkere til 1. klasse vil være første prioritet,
               deretter følger 2. klasse, 3. klasse, osv.
             </p>
-            <button onClick={navigateApply}>Søk om skoleplass</button>
+            <button className="purple_btn" onClick={navigateApply}>
+              Søk om skoleplass
+            </button>
           </Col>
         </Row>
       </Container>
