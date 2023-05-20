@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import { RiAdminLine } from "react-icons/ri";
+
 // React Bootstrap
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
@@ -40,7 +42,7 @@ const NavBar = (props) => {
                 Kontakt
               </Link>
               <Link className="nav_link" to="/admin">
-                Admin
+                <RiAdminLine className="ri_icon1" />
               </Link>
             </Nav>
           </Navbar.Collapse>
