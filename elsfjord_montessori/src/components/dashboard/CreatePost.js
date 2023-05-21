@@ -6,7 +6,11 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import FormError from "../../common/FormError";
 import useAxios from "../../hooks/useAxios";
-import { postUrl } from "../../constants/Api";
+
+// React Bootstrap
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 const schema = yup
   .object({
@@ -51,25 +55,43 @@ const CreatePost = (props) => {
 
   return (
     <>
-      <h2 className="new_post">Create new post</h2>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        {serverError && <FormError>{serverError}</FormError>}
-        <fieldset disabled={submitting}>
-          <div>
-            <input placeholder="Tittel" {...register("title")} />
-            {errors.title && <FormError>{errors.title.message}</FormError>}
-          </div>
+      <Container>
+        <Row>
+          <Col md={4}>
+            <form onSubmit={handleSubmit(onSubmit)}>
+              {serverError && <FormError>{serverError}</FormError>}
+              <fieldset disabled={submitting}>
+                <h2 className="new_post">Create new post</h2>
+                <div>
+                  <input
+                    className="post_input"
+                    placeholder="Tittel"
+                    {...register("title")}
+                  />
+                  {errors.title && (
+                    <FormError>{errors.title.message}</FormError>
+                  )}
+                </div>
 
-          <div>
-            <textarea placeholder="Innholdstekst..." {...register("content")} />
-          </div>
+                <div>
+                  <textarea
+                    className="post_textarea"
+                    placeholder="Innholdstekst..."
+                    {...register("content")}
+                  />
+                </div>
 
-          {/* <div>
+                {/* <div>
             <MediaDropdown register={register} />
           </div> */}
-          <button>{submitting ? "Publiserer..." : "Publiser"}</button>
-        </fieldset>
-      </form>
+                <button className="post_btn">
+                  {submitting ? "Publiserer..." : "Publiser"}
+                </button>
+              </fieldset>
+            </form>
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 };

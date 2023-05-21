@@ -1,0 +1,22 @@
+.post_form {
+  margin-top: 20px;
+}
+.post_input {
+  border: 1px solid $color-black;
+  width: 300px;
+  padding: 10px;
+}
+.post_textarea {
+  padding: 10px;
+  border: 1px solid $color-black;
+  width: 300px;
+  height: 150px;
+  margin-top: 10px;
+}
+.post_btn {
+  border: none;
+  width: 300px;
+  background-color: $color-primary;
+  color: $color-white;
+  padding: 10px;
+}
