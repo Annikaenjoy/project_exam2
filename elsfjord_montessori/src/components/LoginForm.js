@@ -1,10 +1,12 @@
 import React from "react";
 import axios from "axios";
-import { useState } from "react";
+import AuthContext from "../context/AuthContext";
+import { useState, useContext } from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import FormError from "../common/FormError";
+import { useNavigate } from "react-router-dom";
 
 // React Bootstrap
 import Image from "react-bootstrap/Image";
@@ -13,9 +15,9 @@ import Image from "react-bootstrap/Image";
 import Logo from "../assets/img/Logo_farget.png";
 
 // API
-import { baseUrl, TOKEN_PATH } from "../constants/Api";
+import { apiUrl, TOKEN_PATH } from "../constants/Api";
 
-const url = baseUrl + TOKEN_PATH;
+const url = apiUrl + TOKEN_PATH;
 
 const schema = yup.object().shape({
   username: yup.string().required("Skriv inn brukernavn"),
@@ -25,6 +27,8 @@ const LoginForm = (props) => {
   const [submitting, setSubmitting] = useState(false);
   const [loginError, setLoginError] = useState(null);
 
+  const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -33,6 +37,8 @@ const LoginForm = (props) => {
     resolver: yupResolver(schema),
   });
 
+  const [auth, setAuth] = useContext(AuthContext);
+
   async function onSubmit(data) {
     setSubmitting(true);
     setLoginError(null);
@@ -40,6 +46,8 @@ const LoginForm = (props) => {
     try {
       const response = await axios.post(url, data);
       console.log("response", response.data);
+      setAuth(response.data);
+      navigate("/dashboard");
     } catch (error) {
       console.log("error", error);
       setLoginError(error.toString());

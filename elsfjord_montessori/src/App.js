@@ -5,23 +5,28 @@ import Home from "./views/Home";
 import About from "./views/About";
 import Contact from "./views/Contact";
 import Admin from "./views/Admin";
+import Dashboard from "./views/Dashboard";
 import Montessori from "./views/Montessori";
 import News from "./views/News";
 import ApplyToSchool from "./views/ApplyToSchool";
+import { AuthProvider } from "./context/AuthContext";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route exact path="/" element={<Home />}></Route>
-        <Route path="/omoss" element={<About />}></Route>
-        <Route path="/montessori" element={<Montessori />}></Route>
-        <Route path="/news" element={<News />}></Route>
-        <Route path="/apply" element={<ApplyToSchool />}></Route>
-        <Route path="/kontakt" element={<Contact />}></Route>
-        <Route path="/admin" element={<Admin />}></Route>
-      </Routes>
-    </Router>
+    <AuthProvider>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Home />}></Route>
+          <Route path="/omoss" element={<About />}></Route>
+          <Route path="/montessori" element={<Montessori />}></Route>
+          <Route path="/news" element={<News />}></Route>
+          <Route path="/apply" element={<ApplyToSchool />}></Route>
+          <Route path="/kontakt" element={<Contact />}></Route>
+          <Route path="/admin" element={<Admin />}></Route>
+          <Route path="/dashboard" element={<Dashboard />}></Route>
+        </Routes>
+      </Router>
+    </AuthProvider>
   );
 }
 

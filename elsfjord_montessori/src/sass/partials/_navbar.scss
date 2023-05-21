@@ -48,18 +48,19 @@
 .ri_icon1 {
   font-size: 24px;
 }
+.logout {
+  border: 2px solid $color-primary;
+  background-color: $color-primary;
+  color: $color-white;
+  font-family: $font-primary;
+  cursor: pointer;
+}
+.logout:hover {
+  border: 2px solid $color-primary;
+  background-color: $color-white;
+  color: $color-primary;
+}
 
-// .logout {
-//   background-color: transparent;
-//   border: 2px solid $color-white;
-//   padding: 2px 6px;
-//   font-family: $font-primary;
-//   font-size: 16px;
-//   font-weight: 500;
-//   padding: 20px;
-//   color: $color-white !important;
-//   cursor: pointer;
-// }
 @media (min-width: 992px) {
   .nav_link:hover {
     color: $color-primary !important;

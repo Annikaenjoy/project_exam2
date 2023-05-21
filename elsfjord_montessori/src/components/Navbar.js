@@ -1,5 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import AuthContext from "../context/AuthContext";
 
 import { RiAdminLine } from "react-icons/ri";
 
@@ -12,6 +13,15 @@ import Nav from "react-bootstrap/Nav";
 import Logo from "../assets/img/Logo_farget.png";
 
 const NavBar = (props) => {
+  const [auth, setAuth] = useContext(AuthContext);
+
+  const navigate = useNavigate();
+
+  function logout() {
+    setAuth(null);
+    navigate("/");
+  }
+
   return (
     <>
       <Navbar className="navbar" bg="background" variant="light" expand="lg">
@@ -41,9 +51,20 @@ const NavBar = (props) => {
               <Link className="nav_link" to="/kontakt">
                 Kontakt
               </Link>
-              <Link className="nav_link" to="/admin">
-                <RiAdminLine className="ri_icon1" />
-              </Link>
+              {auth ? (
+                <>
+                  <Link className="nav_link" to="/dashboard">
+                    Dashboard
+                  </Link>
+                  <button className="logout" type="button" onClick={logout}>
+                    Log out
+                  </button>
+                </>
+              ) : (
+                <Link className="nav_link" to="/admin">
+                  <RiAdminLine className="ri_icon1" />
+                </Link>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>

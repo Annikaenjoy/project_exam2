@@ -1,5 +1,5 @@
 import React from "react";
-import { baseUrl, postUrl } from "../constants/Api";
+import { apiUrl, postUrl } from "../constants/Api";
 import { useState, useEffect } from "react";
 
 // React Bootstrap
@@ -8,7 +8,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 
-const url = baseUrl + postUrl;
+const newUrl = apiUrl + postUrl;
 
 const BlogPosts = (props) => {
   const [posts, setPosts] = useState([]);
@@ -20,7 +20,7 @@ const BlogPosts = (props) => {
       try {
         setIsError(false);
         setIsLoading(true);
-        const response = await fetch(url);
+        const response = await fetch(newUrl);
         const result = await response.json();
         setPosts(result);
         setIsLoading(false);
