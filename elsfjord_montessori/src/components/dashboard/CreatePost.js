@@ -40,7 +40,9 @@ const CreatePost = (props) => {
 
     data.status = "publish";
 
-    console.log(data);
+    if (data.featured_media === "") {
+      data.featured_media = null;
+    }
 
     try {
       const response = await http.post("wp/v2/posts", data);
@@ -83,7 +85,7 @@ const CreatePost = (props) => {
                 </div>
 
                 <div>
-                  <SelectImg {...register("content")} />
+                  <SelectImg register={register} />
                 </div>
                 <button className="post_btn">
                   {submitting ? "Publiserer..." : "Publiser"}

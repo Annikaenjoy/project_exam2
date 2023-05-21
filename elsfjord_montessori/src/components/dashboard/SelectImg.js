@@ -4,32 +4,32 @@ import PropTypes from "prop-types";
 import useAxios from "../../hooks/useAxios";
 
 export const SelectImg = ({ register }) => {
-  const [img, setImg] = useState([]);
+  const [media, setMedia] = useState([]);
 
   const http = useAxios();
 
   useEffect(function () {
-    async function getImg() {
+    async function getMedia() {
       try {
         const response = await http.get("wp/v2/media");
         console.log("response", response);
-        setImg(response.data);
+        setMedia(response.data);
       } catch (error) {
         console.log(error);
       }
     }
 
-    getImg();
+    getMedia();
   }, []);
 
   return (
     <>
       <select className="post_select" {...register("featured_media")}>
         <option value="">Velg bilde</option>
-        {img.map((img) => {
+        {media.map((media) => {
           return (
-            <option key={img.id} value={img.id}>
-              {img.title.rendered}
+            <option key={media.id} value={media.id}>
+              {media.title.rendered}
             </option>
           );
         })}
