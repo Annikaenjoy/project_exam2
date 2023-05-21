@@ -11,6 +11,7 @@ import useAxios from "../../hooks/useAxios";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import SelectImg from "./SelectImg";
 
 const schema = yup
   .object({
@@ -81,9 +82,9 @@ const CreatePost = (props) => {
                   />
                 </div>
 
-                {/* <div>
-            <MediaDropdown register={register} />
-          </div> */}
+                <div>
+                  <SelectImg {...register("content")} />
+                </div>
                 <button className="post_btn">
                   {submitting ? "Publiserer..." : "Publiser"}
                 </button>

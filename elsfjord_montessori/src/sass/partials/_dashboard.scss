@@ -1,17 +1,30 @@
 .post_form {
+  font-family: $font-primary;
   margin-top: 20px;
 }
 .post_input {
+  font-family: $font-primary;
   border: 1px solid $color-black;
+  font-size: 16px;
   width: 300px;
   padding: 10px;
 }
 .post_textarea {
+  font-family: $font-primary;
+  font-size: 16px;
   padding: 10px;
   border: 1px solid $color-black;
   width: 300px;
-  height: 150px;
+  height: 200px;
   margin-top: 10px;
+}
+.post_select {
+  width: 300px;
+  padding: 5px;
+  font-family: $font-primary;
+  font-size: 16px;
+  border: 1px solid $color-black;
+  margin: 5px 0 10px;
 }
 .post_btn {
   border: none;
@@ -19,4 +32,6 @@
   background-color: $color-primary;
   color: $color-white;
   padding: 10px;
+  font-family: $font-primary;
+  font-size: 16px;
 }

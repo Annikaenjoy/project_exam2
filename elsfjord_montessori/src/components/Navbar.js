@@ -57,7 +57,7 @@ const NavBar = (props) => {
                     Dashboard
                   </Link>
                   <button className="logout" type="button" onClick={logout}>
-                    Log out
+                    Logg ut
                   </button>
                 </>
               ) : (
