@@ -83,7 +83,7 @@ const ContactForm = () => {
       <Heading>Contact us</Heading>
       <Container>
         <Row>
-          <Col>
+          <Col md={5}>
             {formError && <p className="setFormError">{formError}</p>}
             {formSuccess && <p className="setFormSuccess">{formSuccess}</p>}
             <form onSubmit={onSubmit}>

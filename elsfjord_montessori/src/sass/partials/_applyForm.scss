@@ -1,0 +1,48 @@
+.apply_form {
+  display: flex;
+  flex-wrap: wrap;
+}
+.grade {
+  background-color: $color-white;
+  margin: 30px 0;
+}
+legend {
+  display: block;
+  margin-top: 20px;
+  font-family: $font-primary;
+  font-size: 14px;
+  font-weight: 600;
+}
+label {
+  display: block;
+  margin-top: 10px;
+  font-family: $font-primary;
+  font-size: 14px;
+  font-weight: 600;
+}
+.inline_label {
+  display: inline-flex;
+  margin-left: 10px;
+}
+.apply_input {
+  margin-top: 2px;
+  border: 1px solid $color-black;
+  background-color: $color-white;
+  font-family: $font-primary;
+  font-size: 14px;
+  width: 90%;
+  padding: 10px;
+}
+.post_group {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.apply_textarea {
+  margin-top: 10px;
+  width: 90%;
+  height: 150px;
+  font-family: $font-primary;
+  font-size: 14px;
+  border: 1px solid $color-black;
+}
