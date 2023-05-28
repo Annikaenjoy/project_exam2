@@ -9,6 +9,7 @@ import Dashboard from "./views/Dashboard";
 import Montessori from "./views/Montessori";
 import News from "./views/News";
 import ApplyToSchool from "./views/ApplyToSchool";
+import Post from "./views/Post";
 import { AuthProvider } from "./context/AuthContext";
 
 function App() {
@@ -19,11 +20,12 @@ function App() {
           <Route exact path="/" element={<Home />}></Route>
           <Route path="/omoss" element={<About />}></Route>
           <Route path="/montessori" element={<Montessori />}></Route>
-          <Route path="/news" element={<News />}></Route>
-          <Route path="/apply" element={<ApplyToSchool />}></Route>
+          <Route path="/aktuelt" element={<News />}></Route>
+          <Route path="/skoleplass" element={<ApplyToSchool />}></Route>
           <Route path="/kontakt" element={<Contact />}></Route>
           <Route path="/admin" element={<Admin />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>
+          <Route path="/post:id" element={<Post />}></Route>
         </Routes>
       </Router>
     </AuthProvider>

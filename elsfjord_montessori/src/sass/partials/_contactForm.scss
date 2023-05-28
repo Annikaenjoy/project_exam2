@@ -1,0 +1,49 @@
+.form_col {
+  display: flex;
+}
+.contact_input {
+  margin-top: 10px;
+  border: 1px solid $color-black;
+  background-color: $color-white;
+  font-family: $font-primary;
+  font-size: 14px;
+  width: 90%;
+  padding: 10px;
+}
+.contact_textarea {
+  margin-top: 10px;
+  width: 90%;
+  height: 150px;
+  font-family: $font-primary;
+  font-size: 14px;
+  border: 1px solid $color-black;
+}
+.contact_button {
+  width: 90%;
+  padding: 10px;
+  font-family: $font-primary;
+  font-size: 14px;
+  text-align: center;
+  color: $color-white;
+  background-color: $color-primary;
+  border: none;
+}
+
+.setFormError {
+  font-family: $font-primary;
+  font-size: 14px;
+  color: #ff0000;
+  padding: 5px;
+  text-align: center;
+}
+
+.setFormSuccess {
+  text-align: center;
+  font-family: $font-primary;
+  font-size: 14px;
+  color: $color-black;
+  padding: 5px;
+}
+#message {
+  min-height: 150px;
+}

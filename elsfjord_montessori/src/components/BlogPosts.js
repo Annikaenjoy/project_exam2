@@ -1,6 +1,7 @@
 import React from "react";
 import { apiUrl, postUrl } from "../constants/Api";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 // React Bootstrap
 import Container from "react-bootstrap/Container";
@@ -22,6 +23,7 @@ const BlogPosts = (props) => {
         setIsLoading(true);
         const response = await fetch(newUrl);
         const result = await response.json();
+        console.log(result);
         setPosts(result);
         setIsLoading(false);
       } catch (error) {
@@ -43,20 +45,24 @@ const BlogPosts = (props) => {
 
   return (
     <>
-      {posts.map((post) => (
-        <Container>
-          <Row>
-            <Col md={4}>
-              <Card style={{ width: "18rem" }}>
-                <Card.Body>
-                  <p>{post.date}</p>
-                  <Card.Title key={post.id}>{post.title.rendered}</Card.Title>
-                </Card.Body>
-              </Card>
+      <Container fluid>
+        <Row className="justify-content-center align-items-center">
+          {" "}
+          {posts.map((post) => (
+            <Col className="blogposts" xs={10} md={3}>
+              <Link to={`/post${post.id}`}>
+                {" "}
+                <Card>
+                  <Card.Body>
+                    <p>{post.date}</p>
+                    <Card.Title key={post.id}>{post.title.rendered}</Card.Title>
+                  </Card.Body>
+                </Card>{" "}
+              </Link>
             </Col>
-          </Row>
-        </Container>
-      ))}
+          ))}
+        </Row>
+      </Container>
     </>
   );
 };

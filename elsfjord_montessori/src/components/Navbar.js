@@ -42,10 +42,10 @@ const NavBar = (props) => {
               <Link className="nav_link" to="/montessori">
                 Montessori
               </Link>
-              <Link className="nav_link" to="/news">
+              <Link className="nav_link" to="/aktuelt">
                 Aktuelt
               </Link>
-              <Link className="nav_link" to="/apply">
+              <Link className="nav_link" to="/skoleplass">
                 Skoleplass
               </Link>
               <Link className="nav_link" to="/kontakt">

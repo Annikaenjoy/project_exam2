@@ -93,6 +93,7 @@ const CreatePost = (props) => {
               </fieldset>
             </form>
           </Col>
+          <Col md={4}></Col>
         </Row>
       </Container>
     </>
