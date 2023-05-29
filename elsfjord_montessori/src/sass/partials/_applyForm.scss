@@ -2,17 +2,27 @@
   display: flex;
   flex-wrap: wrap;
 }
+
 .grade {
   width: 90%;
+  margin-top: 20px;
   padding: 10px;
+  background-color: $color-white;
+  border: 1px solid $color-black;
 }
 .consent {
   width: 90%;
-  padding: 10px;
 }
 .class {
   display: flex;
   align-items: baseline;
+}
+.class_section {
+  display: block;
+  margin-top: 20px;
+  font-family: $font-primary;
+  font-size: 14px;
+  font-weight: 600;
 }
 legend {
   display: block;
@@ -20,7 +30,6 @@ legend {
   font-family: $font-primary;
   font-size: 14px;
   font-weight: 600;
-  margin-left: -10px;
 }
 label {
   display: flex;
@@ -30,7 +39,7 @@ label {
   font-weight: 600;
 }
 .inline_label {
-  margin: 20px 0 20px 10px;
+  margin: 20px 0 15px 10px;
 }
 .inline_consent {
   font-weight: 400;

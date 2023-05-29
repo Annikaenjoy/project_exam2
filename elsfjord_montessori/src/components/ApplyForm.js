@@ -222,8 +222,9 @@ const ApplyForm = (props) => {
                   value={formData.startdate}
                   onChange={handleChange}
                 />
-                <fieldset className="grade">
-                  <legend>Søker til klassetrinn:</legend>
+                <label className="class_section">Søker til klassetrinn:</label>
+                <section className="grade">
+                  {" "}
                   <section className="class">
                     {" "}
                     <input
@@ -343,7 +344,7 @@ const ApplyForm = (props) => {
                       7. klasse
                     </label>
                   </section>
-                </fieldset>
+                </section>
 
                 <h2 className="form_h2">Opplysninger om foresatte - mor</h2>
                 <label for="mom_name" id="mom_name">
