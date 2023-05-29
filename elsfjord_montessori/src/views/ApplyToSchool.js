@@ -6,11 +6,11 @@ import ApplyForm from "../components/ApplyForm";
 
 const ApplyToSchool = (props) => {
   return (
-    <>
+    <div className="background">
       <NavBar />
       <ApplyForm />
       <Footer />
-    </>
+    </div>
   );
 };
 

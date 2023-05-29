@@ -17,6 +17,9 @@ body {
   width: 100%;
   margin: 0 auto;
 }
+.background {
+  background-color: $color-background;
+}
 .intro {
   width: 70%;
   margin: auto;
@@ -72,24 +75,3 @@ footer::before {
 .wrapper {
   flex: 1 0 auto;
 }
-// .btn_black {
-//   margin-top: 10px;
-//   background-color: transparent;
-//   border: 2px solid $color-black;
-//   padding: 10px 40px;
-//   text-transform: uppercase;
-//   font-family: $font-primary;
-//   font-size: 18px;
-//   font-weight: 700;
-// }
-// .btn_white {
-//   margin-top: 10px;
-//   background-color: transparent;
-//   border: 2px solid $color-white;
-//   padding: 10px 40px;
-//   text-transform: uppercase;
-//   font-family: $font-primary;
-//   font-size: 18px;
-//   font-weight: 700;
-//   color: $color-white;
-// }

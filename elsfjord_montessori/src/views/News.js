@@ -7,12 +7,12 @@ import Footer from "../components/Footer";
 
 const News = (props) => {
   return (
-    <>
+    <div className="background">
       <NavBar />
       <Heading>Aktuelt</Heading>
       <BlogPosts />
       <Footer />
-    </>
+    </div>
   );
 };
 

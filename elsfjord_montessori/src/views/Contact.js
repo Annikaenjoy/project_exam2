@@ -6,11 +6,11 @@ import ContactForm from "../components/ContactForm";
 
 const Contact = (props) => {
   return (
-    <>
+    <div className="background">
       <NavBar />
       <ContactForm />
       <Footer />
-    </>
+    </div>
   );
 };
 

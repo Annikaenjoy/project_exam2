@@ -7,12 +7,12 @@ import CreatePost from "../components/dashboard/CreatePost";
 
 const Dashboard = (props) => {
   return (
-    <>
+    <div className="background">
       <Navbar />
       <Heading>Dashboard</Heading>
       <CreatePost />
       <Footer />
-    </>
+    </div>
   );
 };
 

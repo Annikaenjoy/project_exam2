@@ -505,7 +505,6 @@ const ApplyForm = (props) => {
                 </label>
                 <textarea
                   className="apply_textarea"
-                  type="text"
                   id="other"
                   name="other"
                   value={formData.other}
@@ -516,7 +515,6 @@ const ApplyForm = (props) => {
                 </label>
                 <textarea
                   className="apply_textarea"
-                  type="text"
                   id="why"
                   name="why"
                   value={formData.why}

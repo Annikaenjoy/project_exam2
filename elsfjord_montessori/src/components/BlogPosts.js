@@ -2,6 +2,7 @@ import React from "react";
 import { apiUrl, postUrl } from "../constants/Api";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import SelectImg from "../components/dashboard/SelectImg";
 
 // React Bootstrap
 import Container from "react-bootstrap/Container";
@@ -24,6 +25,7 @@ const BlogPosts = (props) => {
         const response = await fetch(newUrl);
         const result = await response.json();
         console.log(result);
+
         setPosts(result);
         setIsLoading(false);
       } catch (error) {

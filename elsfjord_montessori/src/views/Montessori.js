@@ -7,12 +7,12 @@ import AboutMontessori from "../components/AboutMontessori";
 
 const Montessori = (props) => {
   return (
-    <>
+    <div className="background">
       <NavBar />
       <Heading>Om pedagogikken</Heading>
       <AboutMontessori />
       <Footer />
-    </>
+    </div>
   );
 };
 

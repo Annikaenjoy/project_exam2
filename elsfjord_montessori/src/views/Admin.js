@@ -6,11 +6,11 @@ import LoginForm from "../components/LoginForm";
 
 const Admin = (props) => {
   return (
-    <>
+    <div className="background">
       <NavBar />
       <LoginForm />
       <Footer />
-    </>
+    </div>
   );
 };
 
