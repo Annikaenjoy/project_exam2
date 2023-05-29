@@ -41,7 +41,10 @@
   text-decoration: none;
   background-color: $color-secondary;
 }
-
+.active {
+  font-weight: 600;
+  color: $color-primary !important;
+}
 .nav_link_profile:hover {
   color: $color-white !important;
 }

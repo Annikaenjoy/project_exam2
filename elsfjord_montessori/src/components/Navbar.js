@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import AuthContext from "../context/AuthContext";
 
 import { RiAdminLine } from "react-icons/ri";
@@ -33,37 +33,37 @@ const NavBar = (props) => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="navbar-position ml-auto">
-              <Link className="nav_link" to="/">
+              <NavLink className="nav_link" to="/">
                 Forside
-              </Link>{" "}
-              <Link className="nav_link" to="/omoss">
+              </NavLink>{" "}
+              <NavLink className="nav_link" to="/omoss">
                 Om oss
-              </Link>
-              <Link className="nav_link" to="/montessori">
+              </NavLink>
+              <NavLink className="nav_link" to="/montessori">
                 Montessori
-              </Link>
-              <Link className="nav_link" to="/aktuelt">
+              </NavLink>
+              <NavLink className="nav_link" to="/aktuelt">
                 Aktuelt
-              </Link>
-              <Link className="nav_link" to="/skoleplass">
+              </NavLink>
+              <NavLink className="nav_link" to="/skoleplass">
                 Skoleplass
-              </Link>
-              <Link className="nav_link" to="/kontakt">
+              </NavLink>
+              <NavLink className="nav_link" to="/kontakt">
                 Kontakt
-              </Link>
+              </NavLink>
               {auth ? (
                 <>
-                  <Link className="nav_link" to="/dashboard">
+                  <NavLink className="nav_link" to="/dashboard">
                     Dashboard
-                  </Link>
+                  </NavLink>
                   <button className="logout" type="button" onClick={logout}>
                     Logg ut
                   </button>
                 </>
               ) : (
-                <Link className="nav_link" to="/admin">
+                <NavLink className="nav_link" to="/admin">
                   <RiAdminLine className="ri_icon1" />
-                </Link>
+                </NavLink>
               )}
             </Nav>
           </Navbar.Collapse>

@@ -80,7 +80,7 @@ const ContactForm = () => {
 
   return (
     <>
-      <Heading>Contact us</Heading>
+      <Heading>Kontakt oss</Heading>
       <Container>
         <Row>
           <Col md={5}>
