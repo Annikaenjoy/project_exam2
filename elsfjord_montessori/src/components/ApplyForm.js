@@ -542,7 +542,7 @@ const ApplyForm = (props) => {
                 </fieldset>
 
                 <button
-                  className="contact_button"
+                  className="apply_btn"
                   type="submit"
                   id="button"
                   value="Submit"

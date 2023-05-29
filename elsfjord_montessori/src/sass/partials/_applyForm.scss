@@ -78,3 +78,16 @@ label {
   margin-top: 20px;
   font-family: $font-primary;
 }
+.apply_btn {
+  width: 90%;
+  padding: 10px;
+  font-family: $font-primary;
+  font-size: 14px;
+  text-align: center;
+  color: $color-white;
+  background-color: $color-primary;
+  border: none;
+}
+.apply_btn:hover {
+  background-color: $color-secondary;
+}

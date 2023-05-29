@@ -6,6 +6,7 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import FormError from "../../common/FormError";
 import useAxios from "../../hooks/useAxios";
+import PostList from "./PostList";
 
 // React Bootstrap
 import Container from "react-bootstrap/Container";
@@ -47,7 +48,7 @@ const CreatePost = (props) => {
     try {
       const response = await http.post("wp/v2/posts", data);
       console.log("response", response.data);
-      navigate("/dashboard");
+      navigate("/aktuelt");
     } catch (error) {
       console.log("error", error);
       setServerError(error.toString());
@@ -60,11 +61,11 @@ const CreatePost = (props) => {
     <>
       <Container>
         <Row>
-          <Col md={4}>
-            <form onSubmit={handleSubmit(onSubmit)}>
+          <Col md={6}>
+            <form className="post_form" onSubmit={handleSubmit(onSubmit)}>
               {serverError && <FormError>{serverError}</FormError>}
               <fieldset disabled={submitting}>
-                <h2 className="new_post">Create new post</h2>
+                <h2 className="new_post">Skriv et nytt innlegg</h2>
                 <div>
                   <input
                     className="post_input"
@@ -93,7 +94,9 @@ const CreatePost = (props) => {
               </fieldset>
             </form>
           </Col>
-          <Col md={4}></Col>
+          <Col md={6}>
+            <PostList />
+          </Col>
         </Row>
       </Container>
     </>

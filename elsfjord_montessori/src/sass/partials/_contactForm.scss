@@ -28,7 +28,9 @@
   background-color: $color-primary;
   border: none;
 }
-
+.contact_button:hover {
+  background-color: $color-secondary;
+}
 .setFormError {
   font-family: $font-primary;
   font-size: 14px;
@@ -44,6 +46,7 @@
   color: $color-black;
   padding: 5px;
 }
+
 #message {
   min-height: 150px;
 }

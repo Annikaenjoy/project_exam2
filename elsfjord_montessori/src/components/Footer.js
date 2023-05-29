@@ -35,7 +35,7 @@ const Footer = (props) => {
               <Link className="footer_link" to="/montessori">
                 Montessori
               </Link>
-              <Link className="footer_link" to="/apply">
+              <Link className="footer_link" to="/skoleplass">
                 Skoleplass
               </Link>
             </Col>
