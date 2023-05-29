@@ -38,6 +38,7 @@ const ApplyForm = (props) => {
     children_age: "",
     other: "",
     why: "",
+    consent: "",
   });
 
   const [formError, setFormError] = useState();
@@ -97,10 +98,27 @@ const ApplyForm = (props) => {
           setFormSuccess("Søknaden har blitt sendt!");
           setFormData({
             student_name: "",
-            mom_email: "",
             adress: "",
             postnr: "",
             city: "",
+            birthday: "",
+            otherschool: "",
+            startdate: "",
+            mom_name: "",
+            mom_adress: "",
+            mom_postnr: "",
+            mom_city: "",
+            mom_phone: "",
+            mom_email: "",
+            dad_name: "",
+            dad_adress: "",
+            dad_postnr: "",
+            dad_city: "",
+            dad_phone: "",
+            dad_email: "",
+            children_age: "",
+            other: "",
+            why: "",
           });
           setTimeout(() => {
             setFormSuccess(null);
@@ -118,7 +136,7 @@ const ApplyForm = (props) => {
       <Container fluid>
         <Row className="justify-content-center align-items-center">
           <Col md={6}>
-            <h2>Opplysninger om eleven</h2>
+            <h2 className="form_h2">Opplysninger om eleven</h2>
             {formError && <p className="setFormError">{formError}</p>}
             {formSuccess && <p className="setFormSuccess">{formSuccess}</p>}
             <form className="apply_form" onSubmit={onSubmit}>
@@ -175,6 +193,7 @@ const ApplyForm = (props) => {
                   Fødselsdag
                 </label>
                 <input
+                  className="birthday"
                   type="date"
                   id="birthday"
                   name="birthday"
@@ -205,107 +224,128 @@ const ApplyForm = (props) => {
                 />
                 <fieldset className="grade">
                   <legend>Søker til klassetrinn:</legend>
-                  <input
-                    type="checkbox"
-                    id="firstgrade"
-                    name="firstgrade"
-                    value={formData.firstgrade}
-                    onChange={handleChange}
-                  />
-                  <label
-                    className="inline_label"
-                    for="firstgrade"
-                    id="firstgrade"
-                  >
-                    1. klasse
-                  </label>
-                  <input
-                    type="checkbox"
-                    id="secondgrade"
-                    name="secondgrade"
-                    value={formData.secondgrade}
-                    onChange={handleChange}
-                  />
-                  <label
-                    className="inline_label"
-                    for="secondgrade"
-                    id="secondgrade"
-                  >
-                    2. klasse
-                  </label>
-                  <input
-                    type="checkbox"
-                    id="thirdgrade"
-                    name="thirdgrade"
-                    value={formData.thirdgrade}
-                    onChange={handleChange}
-                  />
-                  <label
-                    className="inline_label"
-                    for="thirdgrade"
-                    id="thirdgrade"
-                  >
-                    3. klasse
-                  </label>
-                  <input
-                    type="checkbox"
-                    id="fourthgrade"
-                    name="fourthgrade"
-                    value={formData.fourthgrade}
-                    onChange={handleChange}
-                  />
-                  <label
-                    className="inline_label"
-                    for="fourthgrade"
-                    id="fourthgrade"
-                  >
-                    4. klasse
-                  </label>
-                  <input
-                    type="checkbox"
-                    id="fifthgrade"
-                    name="fifthgrade"
-                    value={formData.fifthgrade}
-                    onChange={handleChange}
-                  />
-                  <label
-                    className="inline_label"
-                    for="fifthgrade"
-                    id="fifthgrade"
-                  >
-                    5. klasse
-                  </label>
-                  <input
-                    type="checkbox"
-                    id="sixthgrade"
-                    name="sixthgrade"
-                    value={formData.sixthgrade}
-                    onChange={handleChange}
-                  />
-                  <label
-                    className="inline_label"
-                    for="sixthgrade"
-                    id="sixthgrade"
-                  >
-                    6. klasse
-                  </label>
-                  <input
-                    type="checkbox"
-                    id="seventhgrade"
-                    name="seventhgrade"
-                    value={formData.seventhgrade}
-                    onChange={handleChange}
-                  />
-                  <label
-                    className="inline_label"
-                    for="seventhgrade"
-                    id="seventhgrade"
-                  >
-                    7. klasse
-                  </label>
+                  <section className="class">
+                    {" "}
+                    <input
+                      type="checkbox"
+                      id="firstgrade"
+                      name="firstgrade"
+                      value={formData.firstgrade}
+                      onChange={handleChange}
+                    />
+                    <label
+                      className="inline_label"
+                      for="firstgrade"
+                      id="firstgrade"
+                    >
+                      1. klasse
+                    </label>
+                  </section>
+                  <section className="class">
+                    {" "}
+                    <input
+                      type="checkbox"
+                      id="secondgrade"
+                      name="secondgrade"
+                      value={formData.secondgrade}
+                      onChange={handleChange}
+                    />
+                    <label
+                      className="inline_label"
+                      for="secondgrade"
+                      id="secondgrade"
+                    >
+                      2. klasse
+                    </label>
+                  </section>
+                  <section className="class">
+                    {" "}
+                    <input
+                      type="checkbox"
+                      id="thirdgrade"
+                      name="thirdgrade"
+                      value={formData.thirdgrade}
+                      onChange={handleChange}
+                    />
+                    <label
+                      className="inline_label"
+                      for="thirdgrade"
+                      id="thirdgrade"
+                    >
+                      3. klasse
+                    </label>
+                  </section>
+                  <section className="class">
+                    {" "}
+                    <input
+                      type="checkbox"
+                      id="fourthgrade"
+                      name="fourthgrade"
+                      value={formData.fourthgrade}
+                      onChange={handleChange}
+                    />
+                    <label
+                      className="inline_label"
+                      for="fourthgrade"
+                      id="fourthgrade"
+                    >
+                      4. klasse
+                    </label>{" "}
+                  </section>
+                  <section className="class">
+                    {" "}
+                    <input
+                      type="checkbox"
+                      id="fifthgrade"
+                      name="fifthgrade"
+                      value={formData.fifthgrade}
+                      onChange={handleChange}
+                    />
+                    <label
+                      className="inline_label"
+                      for="fifthgrade"
+                      id="fifthgrade"
+                    >
+                      5. klasse
+                    </label>
+                  </section>
+                  <section className="class">
+                    {" "}
+                    <input
+                      type="checkbox"
+                      id="sixthgrade"
+                      name="sixthgrade"
+                      value={formData.sixthgrade}
+                      onChange={handleChange}
+                    />
+                    <label
+                      className="inline_label"
+                      for="sixthgrade"
+                      id="sixthgrade"
+                    >
+                      6. klasse
+                    </label>{" "}
+                  </section>
+                  <section className="class">
+                    {" "}
+                    <input
+                      type="checkbox"
+                      id="seventhgrade"
+                      name="seventhgrade"
+                      value={formData.seventhgrade}
+                      onChange={handleChange}
+                    />
+                    <label
+                      className="inline_label"
+                      for="seventhgrade"
+                      id="seventhgrade"
+                    >
+                      7. klasse
+                    </label>
+                  </section>
                 </fieldset>
 
-                <h2>Opplysninger om foresatte - mor</h2>
+                <h2 className="form_h2">Opplysninger om foresatte - mor</h2>
                 <label for="mom_name" id="mom_name">
                   Fullt navn
                 </label>
@@ -377,7 +417,7 @@ const ApplyForm = (props) => {
                   value={formData.mom_email}
                   onChange={handleChange}
                 />
-                <h2>Opplysninger om foresatte - far</h2>
+                <h2 className="form_h2">Opplysninger om foresatte - far</h2>
                 <label for="dad_name" id="dad_name">
                   Fullt navn
                 </label>
@@ -482,21 +522,24 @@ const ApplyForm = (props) => {
                   value={formData.why}
                   onChange={handleChange}
                 />
-                <fieldset>
+                <fieldset className="consent">
+                  {" "}
                   <legend>Samtykke</legend>
-                  <input
-                    type="checkbox"
-                    id="consent"
-                    name="consent"
-                    value={formData.consent}
-                    onChange={handleChange}
-                  />
-                  <label>
-                    Vi samtykker til at opplysningene gitt i dette skjema kan
-                    lagres i skolens arkiv. Hensikten med oppbevaring av
-                    opplysningene er at vi som skole kan få kontakt med dere
-                    vedr. inntak.
-                  </label>
+                  <section className="class">
+                    <input
+                      type="checkbox"
+                      id="consent"
+                      name="consent"
+                      value={formData.consent}
+                      onChange={handleChange}
+                    />
+                    <label className="inline_consent">
+                      Vi samtykker til at opplysningene gitt i dette skjema kan
+                      lagres i skolens arkiv. Hensikten med oppbevaring av
+                      opplysningene er at vi som skole kan få kontakt med dere
+                      vedr. inntak.
+                    </label>
+                  </section>
                 </fieldset>
 
                 <button
@@ -505,10 +548,12 @@ const ApplyForm = (props) => {
                   id="button"
                   value="Submit"
                 >
-                  Send melding
+                  Send søknad
                 </button>
               </fieldset>
             </form>
+            {formError && <p className="setFormError">{formError}</p>}
+            {formSuccess && <p className="setFormSuccess">{formSuccess}</p>}
           </Col>
         </Row>
       </Container>

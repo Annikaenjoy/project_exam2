@@ -3,8 +3,16 @@
   flex-wrap: wrap;
 }
 .grade {
-  background-color: $color-white;
-  margin: 30px 0;
+  width: 90%;
+  padding: 10px;
+}
+.consent {
+  width: 90%;
+  padding: 10px;
+}
+.class {
+  display: flex;
+  align-items: baseline;
 }
 legend {
   display: block;
@@ -12,18 +20,23 @@ legend {
   font-family: $font-primary;
   font-size: 14px;
   font-weight: 600;
+  margin-left: -10px;
 }
 label {
-  display: block;
+  display: flex;
   margin-top: 10px;
   font-family: $font-primary;
   font-size: 14px;
   font-weight: 600;
 }
 .inline_label {
-  display: inline-flex;
-  margin-left: 10px;
+  margin: 20px 0 20px 10px;
 }
+.inline_consent {
+  font-weight: 400;
+  margin: 10px 0 20px 10px;
+}
+
 .apply_input {
   margin-top: 2px;
   border: 1px solid $color-black;
@@ -36,6 +49,7 @@ label {
 .post_group {
   display: inline-flex;
   flex-direction: column;
+  width: 47.5%;
 }
 
 .apply_textarea {
@@ -45,4 +59,13 @@ label {
   font-family: $font-primary;
   font-size: 14px;
   border: 1px solid $color-black;
+}
+.birthday {
+  padding: 10px;
+  border: 1px solid $color-black;
+  width: 90%;
+}
+.form_h2 {
+  margin-top: 20px;
+  font-family: $font-primary;
 }
