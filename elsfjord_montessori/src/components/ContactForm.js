@@ -83,7 +83,7 @@ const ContactForm = () => {
       <Heading>Kontakt oss</Heading>
       <Container>
         <Row>
-          <Col md={5}>
+          <Col md={6}>
             {formError && <p className="setFormError">{formError}</p>}
             {formSuccess && <p className="setFormSuccess">{formSuccess}</p>}
             <form onSubmit={onSubmit}>
@@ -137,7 +137,18 @@ const ContactForm = () => {
               </fieldset>
             </form>
           </Col>
-          <Col md={5}></Col>{" "}
+          <Col md={6}>
+            <iframe
+              width="90%"
+              height="410"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+              id="gmap_canvas"
+              src="https://maps.google.com/maps?width=500&amp;height=400%&amp;hl=en&amp;q=elsfjordvegen%2028%20Elsfjord+()&amp;t=&amp;z=11&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            ></iframe>
+          </Col>{" "}
         </Row>
       </Container>
     </>

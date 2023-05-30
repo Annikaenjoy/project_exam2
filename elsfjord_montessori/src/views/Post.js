@@ -1,9 +1,16 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import SinglePost from "../components/SinglePost";
 
 const Post = (props) => {
-  const { id } = useParams();
-  return <></>;
+  return (
+    <div className="background">
+      <Navbar />
+      <SinglePost />
+      <Footer />
+    </div>
+  );
 };
 
 export default Post;

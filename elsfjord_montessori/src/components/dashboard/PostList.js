@@ -10,23 +10,22 @@ const PostList = (props) => {
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
 
-  useEffect(() => {
-    async function getPosts() {
-      try {
-        setIsError(false);
-        setIsLoading(true);
-        const response = await fetch(newUrl);
-        const result = await response.json();
-        console.log(result);
+  async function getPosts() {
+    try {
+      setIsError(false);
+      setIsLoading(true);
+      const response = await fetch(newUrl);
+      const result = await response.json();
+      console.log(result);
 
-        setPosts(result);
-        setIsLoading(false);
-      } catch (error) {
-        setIsLoading(false);
-        setIsError(true);
-      }
+      setPosts(result);
+      setIsLoading(false);
+    } catch (error) {
+      setIsLoading(false);
+      setIsError(true);
     }
-
+  }
+  useEffect(() => {
     getPosts();
   }, []);
 
@@ -45,7 +44,7 @@ const PostList = (props) => {
         <ul className="post_list">
           {posts.map((post) => (
             <li key={post.id}>
-              <Link to={`/post${post.id}`}>{post.title.rendered} </Link>
+              <Link to={`/post/${post.id}`}>{post.title.rendered} </Link>
             </li>
           ))}
         </ul>

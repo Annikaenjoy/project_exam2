@@ -25,7 +25,7 @@ function App() {
           <Route path="/kontakt" element={<Contact />}></Route>
           <Route path="/admin" element={<Admin />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>
-          <Route path="/post:id" element={<Post />}></Route>
+          <Route path="/post/:id" exact element={<Post />}></Route>
         </Routes>
       </Router>
     </AuthProvider>
