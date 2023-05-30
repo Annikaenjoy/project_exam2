@@ -141,10 +141,6 @@ const ContactForm = () => {
             <iframe
               width="90%"
               height="410"
-              frameborder="0"
-              scrolling="no"
-              marginheight="0"
-              marginwidth="0"
               id="gmap_canvas"
               src="https://maps.google.com/maps?width=500&amp;height=400%&amp;hl=en&amp;q=elsfjordvegen%2028%20Elsfjord+()&amp;t=&amp;z=11&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
             ></iframe>
