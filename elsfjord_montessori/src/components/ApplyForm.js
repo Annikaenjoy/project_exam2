@@ -489,6 +489,7 @@ const ApplyForm = (props) => {
                   value={formData.dad_email}
                   onChange={handleChange}
                 />
+                <h2 className="form_h2">Andre opplysninger</h2>
 
                 <label for="children_age" id="children_age">
                   Alder på andre barn i familien

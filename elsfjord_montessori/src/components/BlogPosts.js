@@ -9,7 +9,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 
-const newUrl = apiUrl + postUrl;
+const newUrl = `${apiUrl}${postUrl}?_embed`;
 
 const BlogPosts = (props) => {
   const [posts, setPosts] = useState([]);
@@ -23,7 +23,6 @@ const BlogPosts = (props) => {
         setIsLoading(true);
         const response = await fetch(newUrl);
         const result = await response.json();
-        console.log(result);
 
         setPosts(result);
         setIsLoading(false);
@@ -51,12 +50,24 @@ const BlogPosts = (props) => {
           {" "}
           {posts.map((post) => (
             <Col className="blogposts" xs={10} md={3}>
-              <Link to={`/post${post.id}`}>
+              <Link to={`/post/${post.id}`}>
                 {" "}
-                <Card>
+                <Card className="post_card">
                   <Card.Body>
-                    <p>{post.date}</p>
-                    <Card.Title key={post.id}>{post.title.rendered}</Card.Title>
+                    {post._embedded &&
+                      post._embedded["wp:featuredmedia"] &&
+                      post._embedded["wp:featuredmedia"][0].source_url && (
+                        <Card.Img
+                          className="post_img"
+                          variant="top"
+                          src={post._embedded["wp:featuredmedia"][0].source_url}
+                          alt={post.title.rendered}
+                        />
+                      )}
+                    <p className="post_date">{post.date}</p>
+                    <Card.Title className="post_title" key={post.id}>
+                      {post.title.rendered}
+                    </Card.Title>
                   </Card.Body>
                 </Card>{" "}
               </Link>

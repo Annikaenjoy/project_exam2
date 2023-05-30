@@ -1,3 +1,24 @@
 .blogposts {
   margin: 20px;
 }
+.post_card {
+  border-radius: 0;
+  border: none;
+  background-color: $color-background;
+}
+.post_img {
+  width: 100%;
+  border-radius: 0;
+}
+
+.post_title {
+  font-family: $font-secondary;
+  font-size: 24px;
+  color: $color-black;
+}
+.post_date {
+  font-family: $font-primary;
+  font-size: 14px;
+  color: $color-primary;
+  margin: 10px 0 5px 0;
+}
