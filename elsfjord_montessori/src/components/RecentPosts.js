@@ -9,6 +9,8 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 
+import { BoxesLoaderComponent } from "../components/Loader";
+
 const newUrl = `${apiUrl}${postUrl}?_embed&per_page=3`;
 
 const RecentPosts = (props) => {
@@ -36,7 +38,7 @@ const RecentPosts = (props) => {
   }, []);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <BoxesLoaderComponent />;
   }
 
   if (isError) {

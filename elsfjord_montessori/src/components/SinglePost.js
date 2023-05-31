@@ -10,6 +10,8 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 
+import { BoxesLoaderComponent } from "../components/Loader";
+
 const SinglePost = (props) => {
   const [post, setPost] = useState(null);
   const [featuredMedia, setFeaturedMedia] = useState(null);
@@ -41,7 +43,7 @@ const SinglePost = (props) => {
   }, []);
 
   if (!post) {
-    return <div>Loading...</div>;
+    return <BoxesLoaderComponent />;
   }
 
   return (

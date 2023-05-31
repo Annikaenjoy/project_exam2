@@ -3,6 +3,8 @@ import { apiUrl, postUrl } from "../../constants/Api";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+import { BoxesLoaderComponent } from "../Loader";
+
 const newUrl = apiUrl + postUrl;
 
 const PostList = (props) => {
@@ -30,7 +32,7 @@ const PostList = (props) => {
   }, []);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <BoxesLoaderComponent />;
   }
 
   if (isError) {
