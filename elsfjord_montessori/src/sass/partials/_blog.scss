@@ -33,3 +33,15 @@
   color: $color-primary;
   margin: 10px 0 5px 0;
 }
+.single_post_img {
+  margin: 50px 0 20px 0;
+}
+.post_content {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+}
+.single_post_title {
+  display: flex;
+}
