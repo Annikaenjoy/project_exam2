@@ -16,6 +16,17 @@
   font-size: 24px;
   color: $color-black;
 }
+.post_card_frontpage {
+  border-radius: 0;
+  border: none;
+  background-color: $color-white;
+}
+.post_title_frontpage {
+  font-family: $font-secondary;
+  font-size: 24px;
+  color: $color-black;
+  margin: 10px 0 0 0;
+}
 .post_date {
   font-family: $font-primary;
   font-size: 14px;
