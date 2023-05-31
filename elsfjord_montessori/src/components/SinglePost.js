@@ -47,7 +47,7 @@ const SinglePost = (props) => {
   return (
     <Container fluid>
       <Row className="justify-content-center align-items-center">
-        <Col className="post_content" md={10}>
+        <Col key={post.title.rendered} className="post_content" md={10}>
           {" "}
           {featuredMedia && (
             <Image

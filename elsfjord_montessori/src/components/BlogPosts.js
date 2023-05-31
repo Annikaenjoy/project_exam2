@@ -49,7 +49,7 @@ const BlogPosts = (props) => {
         <Row className="justify-content-center align-items-center">
           {" "}
           {posts.map((post) => (
-            <Col className="blogposts" xs={10} md={3}>
+            <Col key={post.id} className="blogposts" xs={10} md={3}>
               <Link to={`/post/${post.id}`}>
                 {" "}
                 <Card className="post_card">
@@ -65,7 +65,7 @@ const BlogPosts = (props) => {
                         />
                       )}
                     <p className="post_date">{post.date}</p>
-                    <Card.Title className="post_title" key={post.id}>
+                    <Card.Title className="post_title">
                       {post.title.rendered}
                     </Card.Title>
                   </Card.Body>
