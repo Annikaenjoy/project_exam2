@@ -26,6 +26,8 @@ const BlogPosts = (props) => {
         const response = await fetch(newUrl);
         const result = await response.json();
 
+        console.log(result);
+
         setPosts(result);
         setIsLoading(false);
       } catch (error) {

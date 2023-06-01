@@ -12,6 +12,8 @@ import PostList from "./PostList";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+
+// Components
 import SelectImg from "./SelectImg";
 
 const schema = yup
@@ -24,7 +26,6 @@ const CreatePost = (props) => {
   const [submitting, setSubmitting] = useState(false);
   const [serverError, setServerError] = useState(null);
 
-  const navigate = useNavigate();
   const http = useAxios();
 
   const {
@@ -48,7 +49,9 @@ const CreatePost = (props) => {
     try {
       const response = await http.post("wp/v2/posts", data);
       console.log("response", response.data);
-      navigate("/aktuelt");
+      setTimeout(() => {
+        window.location.reload();
+      }, 1000);
     } catch (error) {
       console.log("error", error);
       setServerError(error.toString());

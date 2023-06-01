@@ -22,7 +22,9 @@ const Footer = (props) => {
                 Vefsn Kommune. Her tilbyr vi grunnskole med Montessori
                 pedagogisk retning til alle barn fra 1.-7. klassetrinn.
               </p>
-              <FaFacebookF className="fa_icon1" />
+              <Link to="https://www.facebook.com/Elsfjord.montessoriskole">
+                <FaFacebookF className="fa_icon1" />
+              </Link>
               <h5>Elsfjord Montessoriskole SA</h5>
               <p>Design og utvikling av Annika Engøy</p>
             </Col>

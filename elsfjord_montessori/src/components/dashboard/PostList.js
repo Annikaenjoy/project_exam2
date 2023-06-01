@@ -3,7 +3,9 @@ import { apiUrl, postUrl } from "../../constants/Api";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+// Components
 import { BoxesLoaderComponent } from "../Loader";
+import DeletePost from "./DeletePost";
 
 const newUrl = apiUrl + postUrl;
 
@@ -41,18 +43,20 @@ const PostList = (props) => {
 
   return (
     <>
-      <section className="published_list">
-        <h2>Pubiserte innlegg</h2>
-        <ul className="post_list">
-          {posts.map((post) => (
-            <li key={post.id}>
+      {" "}
+      <h2>Pubiserte innlegg</h2>
+      {posts.map((post) => (
+        <section key={post.id} className="published_list">
+          <ul className="post_list">
+            <li>
               <Link to={`/post/edit-post/${post.id}`}>
                 {post.title.rendered}{" "}
               </Link>
             </li>
-          ))}
-        </ul>
-      </section>
+          </ul>
+          <DeletePost id={post.id} />
+        </section>
+      ))}
     </>
   );
 };

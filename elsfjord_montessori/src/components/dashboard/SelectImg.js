@@ -33,7 +33,7 @@ export const SelectImg = ({ register }) => {
             </option>
           );
         })}
-      </select>
+      </select>{" "}
     </>
   );
 };

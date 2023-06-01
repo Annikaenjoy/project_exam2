@@ -12,6 +12,12 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
+// Components
+import SelectImg from "./SelectImg";
+import SinglePost from "../SinglePost";
+
+import { BoxesLoaderComponent } from "../Loader";
+
 const schema = yup
   .object({
     title: yup.string().required("Innlegget må ha en tittel"),
@@ -38,16 +44,35 @@ const Edit = (props) => {
     getPost();
   }, []);
 
+  if (!post) {
+    return <BoxesLoaderComponent />;
+  }
+
   return (
     <>
       <Container>
         <Row>
-          <Col className="edit_post" md={6}>
-            <form>
+          <Col>
+            {" "}
+            <SinglePost />
+          </Col>
+          <Col md={6}>
+            <form className="edit_form">
               <fieldset>
-                <input name="title" />
+                <input
+                  className="edit_input"
+                  name="title"
+                  defaultValue={post.title.rendered}
+                />
+                <div>
+                  <SelectImg />
+                </div>
 
-                <textarea name="content" />
+                <textarea
+                  className="edit_textarea"
+                  name="content"
+                  defaultValue={post.content.rendered}
+                />
 
                 <button>Oppdater</button>
               </fieldset>
