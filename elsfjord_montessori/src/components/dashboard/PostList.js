@@ -46,7 +46,9 @@ const PostList = (props) => {
         <ul className="post_list">
           {posts.map((post) => (
             <li key={post.id}>
-              <Link to={`/post/${post.id}`}>{post.title.rendered} </Link>
+              <Link to={`/post/edit-post/${post.id}`}>
+                {post.title.rendered}{" "}
+              </Link>
             </li>
           ))}
         </ul>

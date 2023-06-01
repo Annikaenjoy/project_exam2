@@ -11,6 +11,7 @@ import News from "./views/News";
 import ApplyToSchool from "./views/ApplyToSchool";
 import Post from "./views/Post";
 import { AuthProvider } from "./context/AuthContext";
+import EditPost from "./views/EditPost";
 
 function App() {
   return (
@@ -26,6 +27,11 @@ function App() {
           <Route path="/admin" element={<Admin />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>
           <Route path="/post/:id" exact element={<Post />}></Route>
+          <Route
+            path="/post/edit-post/:id"
+            exact
+            element={<EditPost />}
+          ></Route>
         </Routes>
       </Router>
     </AuthProvider>
