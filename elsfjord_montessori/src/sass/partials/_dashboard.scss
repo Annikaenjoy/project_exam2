@@ -56,6 +56,7 @@
 }
 
 .post_list li {
+  border: 1px solid $color-secondary;
   background-color: $color-white;
   padding: 10px;
 }
@@ -64,6 +65,7 @@
 }
 
 .post_list li:hover {
+  border: 1px solid $color-secondary;
   background-color: $color-secondary;
   color: $color-white;
 }
@@ -89,7 +91,8 @@
   color: #8cc63f;
 }
 @media (min-width: 768px) {
+  // POST LIST
   .published_posts {
-    margin-bottom: 30px;
+    margin: 0px 0 20px 0;
   }
 }

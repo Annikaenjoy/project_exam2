@@ -44,7 +44,10 @@ const PostList = (props) => {
   return (
     <>
       {" "}
-      <h2 className="published_posts">Pubiserte innlegg</h2>
+      <h2>Pubiserte innlegg</h2>
+      <h4 className="published_posts">
+        Klikk på en tittel for å oppdatere innlegget.
+      </h4>
       {posts.map((post) => (
         <section key={post.id} className="published_list">
           <ul className="post_list">
