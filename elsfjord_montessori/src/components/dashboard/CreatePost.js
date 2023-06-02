@@ -51,7 +51,7 @@ const CreatePost = (props) => {
       console.log("response", response.data);
       setTimeout(() => {
         window.location.reload();
-      }, 1000);
+      }, 500);
     } catch (error) {
       console.log("error", error);
       setServerError(error.toString());

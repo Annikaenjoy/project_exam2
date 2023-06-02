@@ -28,14 +28,12 @@ export default function DeletePost({ id }) {
   return (
     <>
       <button className="delete_button" type="button" onClick={handleDelete}>
-        {error ? (
-          "Error"
-        ) : isDeleted ? (
-          "Innlegget har blitt slettet!"
-        ) : (
-          <FaTrashAlt />
-        )}
+        <FaTrashAlt />
       </button>
+      {error && <p className="error_delete">Error: {error.message}</p>}
+      {isDeleted && (
+        <p className="success_delete">Innlegget har blitt slettet!</p>
+      )}
     </>
   );
 }
