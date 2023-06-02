@@ -50,7 +50,7 @@ const Edit = (props) => {
         setPost(result.data);
       } catch (error) {
         console.log(error);
-        setFetchError(error.toString()); // Set fetchError if an error occurs
+        setFetchError(error.toString());
       } finally {
         setFetchingPost(false);
       }
@@ -69,6 +69,9 @@ const Edit = (props) => {
       const response = await http.put(url, data);
       console.log("response", response.data);
       setUpdated(true);
+      setTimeout(() => {
+        window.location.reload();
+      }, 500);
     } catch (error) {
       setUpdateError(error.toString());
       console.log("error", error);
@@ -90,10 +93,12 @@ const Edit = (props) => {
         <Row>
           <Col md={6}>
             <form className="edit_form" onSubmit={handleSubmit(onSubmit)}>
-              {updated && (
-                <div className="success">Innlegget er oppdatert!</div>
-              )}
-              {updateError && <FormError>{updateError}</FormError>}
+              <div className="update_message">
+                {updated && (
+                  <div className="success">Innlegget er oppdatert!</div>
+                )}
+                {updateError && <FormError>{updateError}</FormError>}
+              </div>
               <fieldset disabled={updatingPost}>
                 <label htmlFor="title" id="title">
                   Tittel
@@ -105,10 +110,6 @@ const Edit = (props) => {
                   {...register("title")}
                 />
                 {errors.title && <FormError>{errors.title.message}</FormError>}
-
-                <div>
-                  <SelectImg />
-                </div>
                 <label htmlFor="content" id="content">
                   Innholdstekst
                 </label>
@@ -117,8 +118,7 @@ const Edit = (props) => {
                   name="content"
                   defaultValue={post.content.rendered}
                   {...register("content")}
-                />
-
+                />{" "}
                 <button className="update_btn" type="submit" value="Submit">
                   Oppdater
                 </button>

@@ -54,6 +54,8 @@ const AboutMontessori = (props) => {
                 bestemte presentasjoner til begrensede aldersgrupper. De
                 aldersblandede gruppene samsvarer med utviklingstrinnene. Man
                 ønsker å oppnå følgende med aldersblandede grupper:
+              </p>
+              <section>
                 <ul>
                   <li>
                     Elever med ulik erfaringsbakgrunn kommer sammen og hjelper
@@ -72,27 +74,23 @@ const AboutMontessori = (props) => {
                     samtidig, etter evne og normen blir samarbeid (i stedet for
                     konkurranse).
                   </li>
-                  <li>
-                    {" "}
-                    Vennskap oppmuntres på tvers av{" "}
-                    <ul>
-                      <li>
-                        Elever med spesielle behov kan repetere eller jobbe
-                        lenge med et arbeid uten å måtte forlate grupperommet.
-                      </li>
+                  <li> Vennskap oppmuntres på tvers av klasser. </li>
 
-                      <li>
-                        Elever inspirerer hverandre og oppmuntrer hverandre til
-                        innsats og utforskning.
-                      </li>
-                      <li>
-                        Yngre elever stimuleres til å tilegne seg grunnleggende
-                        ferdigheter av eldre elever.
-                      </li>
-                    </ul>
+                  <li>
+                    Elever med spesielle behov kan repetere eller jobbe lenge
+                    med et arbeid uten å måtte forlate grupperommet.
                   </li>
-                </ul>{" "}
-              </p>
+
+                  <li>
+                    Elever inspirerer hverandre og oppmuntrer hverandre til
+                    innsats og utforskning.
+                  </li>
+                  <li>
+                    Yngre elever stimuleres til å tilegne seg grunnleggende
+                    ferdigheter av eldre elever.
+                  </li>
+                </ul>
+              </section>
               <p>
                 {" "}
                 Barnet i et montessorilæringsmiljø har frihet til å påvirke valg
