@@ -1,12 +1,11 @@
 import React from "react";
 
 // Images
-import montessori from "../assets/img/montessori.jpeg";
-
+import Material3_web from "../assets/img/Materialer3_web.jpg";
 const Header = (props) => {
   return (
     <>
-      <img src={montessori} title="montesorri" alt="montessori" />
+      <img src={Material3_web} title="montesorri" alt="montessori" />
     </>
   );
 };
