@@ -17,7 +17,7 @@ import SinglePost from "../SinglePost";
 
 import { BoxesLoaderComponent } from "../Loader";
 
-const schema = yup.object({
+const schema = yup.object().shape({
   title: yup.string().required("Innlegget må ha en tittel"),
   content: yup.string().required("Innlegget må ha innholdstekst"),
 });
@@ -46,7 +46,7 @@ const Edit = (props) => {
     async function getPost() {
       try {
         const result = await http.get(url);
-        console.log(result.data);
+        console.log("result", result.data);
         setPost(result.data);
       } catch (error) {
         console.log(error);
@@ -70,14 +70,18 @@ const Edit = (props) => {
       console.log("response", response.data);
       setUpdated(true);
     } catch (error) {
+      setUpdateError(error.toString());
       console.log("error", error);
     } finally {
       setUpdatingPost(false);
     }
   }
 
-  if (!post) {
+  if (fetchingPost) {
     return <BoxesLoaderComponent />;
+  }
+  if (fetchError) {
+    return <div>Error! Klarte ikke hente post..</div>;
   }
 
   return (
@@ -89,7 +93,8 @@ const Edit = (props) => {
               {updated && (
                 <div className="success">Innlegget er oppdatert!</div>
               )}
-              <fieldset>
+              {updateError && <FormError>{updateError}</FormError>}
+              <fieldset disabled={updatingPost}>
                 <label htmlFor="title" id="title">
                   Tittel
                 </label>
