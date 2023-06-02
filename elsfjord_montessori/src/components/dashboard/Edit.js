@@ -29,6 +29,7 @@ const Edit = (props) => {
   const [updatingPost, setUpdatingPost] = useState(false);
   const [fetchError, setFetchError] = useState(null);
   const [updateError, setUpdateError] = useState(null);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const {
     register,
@@ -66,7 +67,8 @@ const Edit = (props) => {
     console.log(data);
 
     try {
-      const response = await http.put(url, data);
+      const updatedData = { ...data, image: selectedImage };
+      const response = await http.put(url, updatedData);
       console.log("response", response.data);
       setUpdated(true);
       setTimeout(() => {
@@ -86,6 +88,9 @@ const Edit = (props) => {
   if (fetchError) {
     return <div>Error! Klarte ikke hente post..</div>;
   }
+  const handleImageSelect = (imageData) => {
+    setSelectedImage(imageData);
+  };
 
   return (
     <>
@@ -119,6 +124,7 @@ const Edit = (props) => {
                   defaultValue={post.content.rendered}
                   {...register("content")}
                 />{" "}
+                <SelectImg onSelect={handleImageSelect} />
                 <button className="update_btn" type="submit" value="Submit">
                   Oppdater
                 </button>

@@ -1,5 +1,14 @@
+.search_col {
+  display: flex;
+  margin-left: 100px;
+}
+.searchbar {
+  width: 300px;
+  padding: 7px;
+  border: 1px solid $color-black;
+}
 .blogposts {
-  margin: 20px;
+  margin-top: 20px;
 }
 .post_card {
   border-radius: 0;

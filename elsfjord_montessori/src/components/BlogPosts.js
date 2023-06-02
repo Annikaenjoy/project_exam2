@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { apiUrl, postUrl } from "../constants/Api";
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 // React Bootstrap
@@ -17,6 +16,7 @@ const BlogPosts = (props) => {
   const [posts, setPosts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     async function getPosts() {
@@ -39,6 +39,10 @@ const BlogPosts = (props) => {
     getPosts();
   }, []);
 
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
   if (isLoading) {
     return <BoxesLoaderComponent />;
   }
@@ -47,15 +51,26 @@ const BlogPosts = (props) => {
     return <div>An error occurred when calling the API</div>;
   }
 
+  const filteredPosts = posts.filter((post) =>
+    post.title.rendered.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <>
       <Container fluid>
         <Row className="justify-content-center align-items-center">
-          {" "}
-          {posts.map((post) => (
+          <Col className="search_col" xs={12}>
+            <input
+              className="searchbar"
+              type="text"
+              value={searchTerm}
+              onChange={handleSearchChange}
+              placeholder="Søk etter artikkel"
+            />
+          </Col>
+          {filteredPosts.map((post) => (
             <Col key={post.id} className="blogposts" xs={10} md={3}>
               <Link to={`/post/${post.id}`}>
-                {" "}
                 <Card className="post_card">
                   <Card.Body>
                     {post._embedded &&
@@ -73,7 +88,7 @@ const BlogPosts = (props) => {
                       {post.title.rendered}
                     </Card.Title>
                   </Card.Body>
-                </Card>{" "}
+                </Card>
               </Link>
             </Col>
           ))}
