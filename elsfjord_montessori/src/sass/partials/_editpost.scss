@@ -10,3 +10,16 @@
   height: 200px;
   width: 90%;
 }
+.update_btn {
+  width: 90%;
+  padding: 10px;
+  font-family: $font-primary;
+  font-size: 14px;
+  text-align: center;
+  color: $color-white;
+  background-color: $color-primary;
+  border: none;
+}
+.update_btn:hover {
+  background-color: $color-secondary;
+}

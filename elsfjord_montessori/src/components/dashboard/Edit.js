@@ -52,13 +52,16 @@ const Edit = (props) => {
     <>
       <Container>
         <Row>
-          <Col>
+          <Col md={6}>
             {" "}
             <SinglePost />
           </Col>
           <Col md={6}>
             <form className="edit_form">
               <fieldset>
+                <label htmlFor="title" id="title">
+                  Tittel
+                </label>
                 <input
                   className="edit_input"
                   name="title"
@@ -67,14 +70,18 @@ const Edit = (props) => {
                 <div>
                   <SelectImg />
                 </div>
-
+                <label htmlFor="content" id="content">
+                  Content
+                </label>
                 <textarea
                   className="edit_textarea"
                   name="content"
                   defaultValue={post.content.rendered}
                 />
 
-                <button>Oppdater</button>
+                <button className="update_btn" type="submit" value="Submit">
+                  Oppdater
+                </button>
               </fieldset>
             </form>
           </Col>

@@ -141,7 +141,7 @@ const ApplyForm = (props) => {
             {formSuccess && <p className="setFormSuccess">{formSuccess}</p>}
             <form className="apply_form" onSubmit={onSubmit}>
               <fieldset>
-                <label for="student_name" id="student_name">
+                <label htmlFor="student_name" id="student_name">
                   Fullt navn
                 </label>
                 <input
@@ -152,7 +152,7 @@ const ApplyForm = (props) => {
                   value={formData.student_name}
                   onChange={handleChange}
                 />
-                <label for="adress" id="adress">
+                <label htmlFor="adress" id="adress">
                   Adresse
                 </label>
                 <input
@@ -164,7 +164,7 @@ const ApplyForm = (props) => {
                   onChange={handleChange}
                 />
                 <div className="post_group">
-                  <label for="postnr" id="postnr">
+                  <label htmlFor="postnr" id="postnr">
                     Postnummer
                   </label>
                   <input
@@ -177,7 +177,7 @@ const ApplyForm = (props) => {
                   />{" "}
                 </div>
                 <div className="post_group">
-                  <label for="city" id="city">
+                  <label htmlFor="city" id="city">
                     Poststed
                   </label>
                   <input
@@ -189,7 +189,7 @@ const ApplyForm = (props) => {
                     onChange={handleChange}
                   />
                 </div>
-                <label for="birthday" id="birthday">
+                <label htmlFor="birthday" id="birthday">
                   Fødselsdag
                 </label>
                 <input
@@ -200,7 +200,7 @@ const ApplyForm = (props) => {
                   value={formData.birthday}
                   onChange={handleChange}
                 />
-                <label for="otherschool" id="otherschool">
+                <label htmlFor="otherschool" id="otherschool">
                   Skal barnet meldes ut av en annen skole? Hvilken?
                 </label>
                 <input
@@ -211,7 +211,7 @@ const ApplyForm = (props) => {
                   value={formData.otherschool}
                   onChange={handleChange}
                 />
-                <label for="startdate" id="startdate">
+                <label htmlFor="startdate" id="startdate">
                   Dato for ønsket oppstart
                 </label>
                 <input
@@ -236,7 +236,7 @@ const ApplyForm = (props) => {
                     />
                     <label
                       className="inline_label"
-                      for="firstgrade"
+                      htmlFor="firstgrade"
                       id="firstgrade"
                     >
                       1. klasse
@@ -253,7 +253,7 @@ const ApplyForm = (props) => {
                     />
                     <label
                       className="inline_label"
-                      for="secondgrade"
+                      htmlFor="secondgrade"
                       id="secondgrade"
                     >
                       2. klasse
@@ -270,7 +270,7 @@ const ApplyForm = (props) => {
                     />
                     <label
                       className="inline_label"
-                      for="thirdgrade"
+                      htmlFor="thirdgrade"
                       id="thirdgrade"
                     >
                       3. klasse
@@ -287,7 +287,7 @@ const ApplyForm = (props) => {
                     />
                     <label
                       className="inline_label"
-                      for="fourthgrade"
+                      htmlFor="fourthgrade"
                       id="fourthgrade"
                     >
                       4. klasse
@@ -304,7 +304,7 @@ const ApplyForm = (props) => {
                     />
                     <label
                       className="inline_label"
-                      for="fifthgrade"
+                      htmlFor="fifthgrade"
                       id="fifthgrade"
                     >
                       5. klasse
@@ -321,7 +321,7 @@ const ApplyForm = (props) => {
                     />
                     <label
                       className="inline_label"
-                      for="sixthgrade"
+                      htmlFor="sixthgrade"
                       id="sixthgrade"
                     >
                       6. klasse
@@ -338,7 +338,7 @@ const ApplyForm = (props) => {
                     />
                     <label
                       className="inline_label"
-                      for="seventhgrade"
+                      htmlFor="seventhgrade"
                       id="seventhgrade"
                     >
                       7. klasse
@@ -347,7 +347,7 @@ const ApplyForm = (props) => {
                 </section>
 
                 <h2 className="form_h2">Opplysninger om foresatte - mor</h2>
-                <label for="mom_name" id="mom_name">
+                <label htmlFor="mom_name" id="mom_name">
                   Fullt navn
                 </label>
                 <input
@@ -358,7 +358,7 @@ const ApplyForm = (props) => {
                   value={formData.mom_name}
                   onChange={handleChange}
                 />
-                <label for="mom_adress" id="mom_adress">
+                <label htmlFor="mom_adress" id="mom_adress">
                   Evt annen adresse
                 </label>
                 <input
@@ -370,7 +370,7 @@ const ApplyForm = (props) => {
                   onChange={handleChange}
                 />
                 <div className="post_group">
-                  <label for="mom_postnr" id="mom_postnr">
+                  <label htmlFor="mom_postnr" id="mom_postnr">
                     Postnummer
                   </label>
                   <input
@@ -383,7 +383,7 @@ const ApplyForm = (props) => {
                   />{" "}
                 </div>
                 <div className="post_group">
-                  <label for="mom_city" id="mom_city">
+                  <label htmlFor="mom_city" id="mom_city">
                     Poststed
                   </label>
                   <input
@@ -396,7 +396,7 @@ const ApplyForm = (props) => {
                   />
                 </div>
 
-                <label for="mom_phone" id="mom_phone">
+                <label htmlFor="mom_phone" id="mom_phone">
                   Telefon
                 </label>
                 <input
@@ -407,7 +407,7 @@ const ApplyForm = (props) => {
                   value={formData.mom_phone}
                   onChange={handleChange}
                 />
-                <label for="mom_email" id="mom_email">
+                <label htmlFor="mom_email" id="mom_email">
                   Epost
                 </label>
                 <input
@@ -419,7 +419,7 @@ const ApplyForm = (props) => {
                   onChange={handleChange}
                 />
                 <h2 className="form_h2">Opplysninger om foresatte - far</h2>
-                <label for="dad_name" id="dad_name">
+                <label htmlFor="dad_name" id="dad_name">
                   Fullt navn
                 </label>
                 <input
@@ -430,7 +430,7 @@ const ApplyForm = (props) => {
                   value={formData.dad_name}
                   onChange={handleChange}
                 />
-                <label for="dad_adress" id="dad_adress">
+                <label htmlFor="dad_adress" id="dad_adress">
                   Evt annen adresse
                 </label>
                 <input
@@ -442,7 +442,7 @@ const ApplyForm = (props) => {
                   onChange={handleChange}
                 />
                 <div className="post_group">
-                  <label for="dad_postnr" id="dad_postnr">
+                  <label htmlFor="dad_postnr" id="dad_postnr">
                     Postnummer
                   </label>
                   <input
@@ -455,7 +455,7 @@ const ApplyForm = (props) => {
                   />
                 </div>
                 <div className="post_group">
-                  <label for="dad_city" id="dad_city">
+                  <label htmlFor="dad_city" id="dad_city">
                     Poststed
                   </label>
                   <input
@@ -467,7 +467,7 @@ const ApplyForm = (props) => {
                     onChange={handleChange}
                   />
                 </div>
-                <label for="dad_phone" id="dad_phone">
+                <label htmlFor="dad_phone" id="dad_phone">
                   Telefon
                 </label>
                 <input
@@ -478,7 +478,7 @@ const ApplyForm = (props) => {
                   value={formData.dad_phone}
                   onChange={handleChange}
                 />
-                <label for="dad_email" id="dad_email">
+                <label htmlFor="dad_email" id="dad_email">
                   Epost
                 </label>
                 <input
@@ -491,7 +491,7 @@ const ApplyForm = (props) => {
                 />
                 <h2 className="form_h2">Andre opplysninger</h2>
 
-                <label for="children_age" id="children_age">
+                <label htmlFor="children_age" id="children_age">
                   Alder på andre barn i familien
                 </label>
                 <input
@@ -502,7 +502,7 @@ const ApplyForm = (props) => {
                   value={formData.children_age}
                   onChange={handleChange}
                 />
-                <label for="other" id="other">
+                <label htmlFor="other" id="other">
                   Andre opplysninger som er relevante for søknaden:
                 </label>
                 <textarea
@@ -512,7 +512,7 @@ const ApplyForm = (props) => {
                   value={formData.other}
                   onChange={handleChange}
                 />
-                <label for="why" id="why">
+                <label htmlFor="why" id="why">
                   Hvorfor ønsker dere plass hos oss?{" "}
                 </label>
                 <textarea

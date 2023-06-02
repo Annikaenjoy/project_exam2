@@ -48,11 +48,10 @@ const PostList = (props) => {
       {posts.map((post) => (
         <section key={post.id} className="published_list">
           <ul className="post_list">
-            <li>
-              <Link to={`/post/edit-post/${post.id}`}>
-                {post.title.rendered}{" "}
-              </Link>
-            </li>
+            <Link to={`/post/edit-post/${post.id}`}>
+              {" "}
+              <li>{post.title.rendered} </li>{" "}
+            </Link>
           </ul>
           <DeletePost id={post.id} />
         </section>
