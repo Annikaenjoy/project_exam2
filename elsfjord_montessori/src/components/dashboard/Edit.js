@@ -1,5 +1,4 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -18,14 +17,26 @@ import SinglePost from "../SinglePost";
 
 import { BoxesLoaderComponent } from "../Loader";
 
-const schema = yup
-  .object({
-    title: yup.string().required("Innlegget må ha en tittel"),
-  })
-  .required();
+const schema = yup.object({
+  title: yup.string().required("Innlegget må ha en tittel"),
+  content: yup.string().required("Innlegget må ha innholdstekst"),
+});
 
 const Edit = (props) => {
   const [post, setPost] = useState(null);
+  const [updated, setUpdated] = useState(false);
+  const [fetchingPost, setFetchingPost] = useState(true);
+  const [updatingPost, setUpdatingPost] = useState(false);
+  const [fetchError, setFetchError] = useState(null);
+  const [updateError, setUpdateError] = useState(null);
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+  });
 
   const http = useAxios();
   let { id } = useParams();
@@ -39,10 +50,31 @@ const Edit = (props) => {
         setPost(result.data);
       } catch (error) {
         console.log(error);
+        setFetchError(error.toString()); // Set fetchError if an error occurs
+      } finally {
+        setFetchingPost(false);
       }
     }
     getPost();
   }, []);
+
+  async function onSubmit(data) {
+    setUpdatingPost(true);
+    setUpdateError(null);
+    setUpdated(false);
+
+    console.log(data);
+
+    try {
+      const response = await http.put(url, data);
+      console.log("response", response.data);
+      setUpdated(true);
+    } catch (error) {
+      console.log("error", error);
+    } finally {
+      setUpdatingPost(false);
+    }
+  }
 
   if (!post) {
     return <BoxesLoaderComponent />;
@@ -53,11 +85,10 @@ const Edit = (props) => {
       <Container>
         <Row>
           <Col md={6}>
-            {" "}
-            <SinglePost />
-          </Col>
-          <Col md={6}>
-            <form className="edit_form">
+            <form className="edit_form" onSubmit={handleSubmit(onSubmit)}>
+              {updated && (
+                <div className="success">Innlegget er oppdatert!</div>
+              )}
               <fieldset>
                 <label htmlFor="title" id="title">
                   Tittel
@@ -66,17 +97,21 @@ const Edit = (props) => {
                   className="edit_input"
                   name="title"
                   defaultValue={post.title.rendered}
+                  {...register("title")}
                 />
+                {errors.title && <FormError>{errors.title.message}</FormError>}
+
                 <div>
                   <SelectImg />
                 </div>
                 <label htmlFor="content" id="content">
-                  Content
+                  Innholdstekst
                 </label>
                 <textarea
                   className="edit_textarea"
                   name="content"
                   defaultValue={post.content.rendered}
+                  {...register("content")}
                 />
 
                 <button className="update_btn" type="submit" value="Submit">
@@ -84,6 +119,9 @@ const Edit = (props) => {
                 </button>
               </fieldset>
             </form>
+          </Col>
+          <Col md={6}>
+            <SinglePost />
           </Col>
         </Row>
       </Container>
