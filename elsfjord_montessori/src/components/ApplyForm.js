@@ -193,7 +193,7 @@ const ApplyForm = (props) => {
                   Fødselsdag
                 </label>
                 <input
-                  className="birthday"
+                  className="apply_input"
                   type="date"
                   id="birthday"
                   name="birthday"

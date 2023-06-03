@@ -19,13 +19,13 @@ function App() {
       <Router>
         <Routes>
           <Route exact path="/" element={<Home />}></Route>
-          <Route path="/omoss" element={<About />}></Route>
-          <Route path="/montessori" element={<Montessori />}></Route>
-          <Route path="/aktuelt" element={<News />}></Route>
-          <Route path="/skoleplass" element={<ApplyToSchool />}></Route>
-          <Route path="/kontakt" element={<Contact />}></Route>
-          <Route path="/admin" element={<Admin />}></Route>
-          <Route path="/dashboard" element={<Dashboard />}></Route>
+          <Route exact path="/omoss" element={<About />}></Route>
+          <Route exact path="/montessori" element={<Montessori />}></Route>
+          <Route exact path="/aktuelt" element={<News />}></Route>
+          <Route exact path="/skoleplass" element={<ApplyToSchool />}></Route>
+          <Route exact path="/kontakt" element={<Contact />}></Route>
+          <Route exact path="/admin" element={<Admin />}></Route>
+          <Route exact path="/dashboard" element={<Dashboard />}></Route>
           <Route path="/post/:id" exact element={<Post />}></Route>
           <Route
             path="/post/edit-post/:id"

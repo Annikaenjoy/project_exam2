@@ -1,6 +1,8 @@
+// LOGIN FORM
+
 .login_image {
   display: flex;
-  width: 400px;
+  width: 300px;
   margin: 70px auto 20px;
 }
 form {
@@ -8,21 +10,21 @@ form {
   justify-content: center;
 }
 .form_input {
-  width: 400px;
+  width: 300px;
   padding: 10px;
   border: 1px solid $color-black;
   margin: 10px auto 0;
   font-family: $font-primary;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .form_btn {
-  width: 400px;
+  width: 300px;
   background-color: $color-primary;
   padding: 10px;
   color: $color-white;
   font-family: $font-primary;
-  font-size: 18px;
+  font-size: 14px;
   border: none;
   margin-top: 10px;
 }
@@ -32,4 +34,17 @@ form {
 .form_error {
   font-size: 14px;
   color: #ff0000;
+}
+@media (min-width: 500px) {
+  .login_image {
+    width: 400px;
+  }
+  .form_input {
+    width: 400px;
+    font-size: 18px;
+  }
+  .form_btn {
+    width: 400px;
+    font-size: 18px;
+  }
 }

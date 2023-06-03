@@ -9,6 +9,9 @@ import FormError from "../common/FormError";
 import { useNavigate } from "react-router-dom";
 
 // React Bootstrap
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 
 // Images
@@ -56,41 +59,47 @@ const LoginForm = (props) => {
     }
   }
   return (
-    <>
-      <Image className="login_image" src={Logo} />
-      <form onSubmit={handleSubmit(onSubmit)}>
-        {loginError && <FormError>{loginError}</FormError>}
-        <fieldset disabled={submitting}>
-          <div>
-            <input
-              className="form_input"
-              name="username"
-              placeholder="Brukernavn"
-              {...register("username")}
-            />
-            {errors.username && (
-              <FormError>{errors.username.message}</FormError>
-            )}
-          </div>
+    <Container className="login" fluid>
+      <Row>
+        {" "}
+        <Col>
+          <Image className="login_image" src={Logo} />
 
-          <div>
-            <input
-              className="form_input"
-              name="password"
-              placeholder="Passord"
-              {...register("password")}
-              type="password"
-            />
-            {errors.password && (
-              <FormError>{errors.password.message}</FormError>
-            )}
-          </div>
-          <button className="form_btn">
-            {submitting ? "Logger inn..." : "Logg inn"}
-          </button>
-        </fieldset>
-      </form>
-    </>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            {loginError && <FormError>{loginError}</FormError>}
+            <fieldset disabled={submitting}>
+              <div>
+                <input
+                  className="form_input"
+                  name="username"
+                  placeholder="Brukernavn"
+                  {...register("username")}
+                />
+                {errors.username && (
+                  <FormError>{errors.username.message}</FormError>
+                )}
+              </div>
+
+              <div>
+                <input
+                  className="form_input"
+                  name="password"
+                  placeholder="Passord"
+                  {...register("password")}
+                  type="password"
+                />
+                {errors.password && (
+                  <FormError>{errors.password.message}</FormError>
+                )}
+              </div>
+              <button className="form_btn">
+                {submitting ? "Logger inn..." : "Logg inn"}
+              </button>
+            </fieldset>
+          </form>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

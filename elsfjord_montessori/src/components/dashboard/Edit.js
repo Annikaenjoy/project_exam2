@@ -24,7 +24,7 @@ const schema = yup.object().shape({
 
 const Edit = (props) => {
   const [post, setPost] = useState(null);
-  const [updated, setUpdated] = useState(true);
+  const [updated, setUpdated] = useState(false);
   const [fetchingPost, setFetchingPost] = useState(true);
   const [updatingPost, setUpdatingPost] = useState(false);
   const [fetchError, setFetchError] = useState(null);
@@ -90,8 +90,8 @@ const Edit = (props) => {
   return (
     <>
       <Container>
-        <Row>
-          <Col md={6}>
+        <Row className="justify-content-center align-items-center">
+          <Col className="edit_col" md={6}>
             <div className="update_message">
               {updated && (
                 <div className="success">Innlegget er oppdatert!</div>
@@ -100,9 +100,9 @@ const Edit = (props) => {
             </div>
             <form className="edit_form" onSubmit={handleSubmit(onSubmit)}>
               <fieldset className="edit_fieldset" disabled={updatingPost}>
-                <label htmlFor="title" id="title">
+                {/* <label className="edit_label" htmlFor="title" id="title">
                   Tittel
-                </label>
+                </label> */}
                 <input
                   className="edit_input"
                   name="title"
@@ -110,9 +110,9 @@ const Edit = (props) => {
                   {...register("title")}
                 />
                 {errors.title && <FormError>{errors.title.message}</FormError>}
-                <label htmlFor="content" id="content">
+                {/* <label className="edit_label" htmlFor="content" id="content">
                   Innholdstekst
-                </label>
+                </label> */}
                 <textarea
                   className="edit_textarea"
                   name="content"

@@ -10,6 +10,7 @@
   font-size: 16px;
   width: 90%;
   padding: 10px;
+  border-radius: none;
 }
 .post_textarea {
   font-family: $font-primary;
@@ -19,14 +20,16 @@
   width: 90%;
   height: 200px;
   margin-top: 10px;
+  border-radius: none;
 }
 .post_select {
   width: 90%;
-  padding: 5px;
+  padding: 10px;
   font-family: $font-primary;
   font-size: 16px;
   border: 1px solid $color-black;
   margin: 5px 0 10px;
+  border-radius: none;
 }
 .post_btn {
   border: none;
@@ -73,6 +76,7 @@ hgroup {
 
 // DELETE POST
 .delete_button {
+  color: $color-black;
   border: none;
   background: none;
   font-size: 21px;
