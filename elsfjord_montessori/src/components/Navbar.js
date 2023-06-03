@@ -10,7 +10,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 
 // Images
-import Logo from "../assets/img/Logo_farget.png";
+import Logo from "../assets/img/logo/Logo_farget.png";
 
 const NavBar = (props) => {
   const [auth, setAuth] = useContext(AuthContext);

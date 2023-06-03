@@ -50,7 +50,7 @@ const RecentPosts = (props) => {
       <Container fluid>
         <Row className="justify-content-center">
           {posts.map((post) => (
-            <Col className="blogposts" xs={10} md={3} key={post.id}>
+            <Col className="blogposts" xs={10} md={4} key={post.id}>
               <Link to={`/post/${post.id}`}>
                 <Card className="post_card_frontpage">
                   <Card.Body>

@@ -1,9 +1,8 @@
 .edit_form {
-  display: flex;
-  margin: 50px 0 0 0;
+  margin-top: 20px;
 }
-.update_message {
-  display: block;
+.edit_fieldset {
+  width: 100%;
 }
 .edit_input {
   width: 90%;
@@ -25,4 +24,9 @@
 }
 .update_btn:hover {
   background-color: $color-secondary;
+}
+.success {
+  font-family: $font-primary;
+  font-size: 14px;
+  color: #8cc63f;
 }

@@ -24,12 +24,11 @@ const schema = yup.object().shape({
 
 const Edit = (props) => {
   const [post, setPost] = useState(null);
-  const [updated, setUpdated] = useState(false);
+  const [updated, setUpdated] = useState(true);
   const [fetchingPost, setFetchingPost] = useState(true);
   const [updatingPost, setUpdatingPost] = useState(false);
   const [fetchError, setFetchError] = useState(null);
   const [updateError, setUpdateError] = useState(null);
-  const [selectedImage, setSelectedImage] = useState(null);
 
   const {
     register,
@@ -67,8 +66,7 @@ const Edit = (props) => {
     console.log(data);
 
     try {
-      const updatedData = { ...data, image: selectedImage };
-      const response = await http.put(url, updatedData);
+      const response = await http.put(url, data);
       console.log("response", response.data);
       setUpdated(true);
       setTimeout(() => {
@@ -88,23 +86,20 @@ const Edit = (props) => {
   if (fetchError) {
     return <div>Error! Klarte ikke hente post..</div>;
   }
-  const handleImageSelect = (imageData) => {
-    setSelectedImage(imageData);
-  };
 
   return (
     <>
       <Container>
         <Row>
           <Col md={6}>
+            <div className="update_message">
+              {updated && (
+                <div className="success">Innlegget er oppdatert!</div>
+              )}
+              {updateError && <FormError>{updateError}</FormError>}
+            </div>
             <form className="edit_form" onSubmit={handleSubmit(onSubmit)}>
-              <div className="update_message">
-                {updated && (
-                  <div className="success">Innlegget er oppdatert!</div>
-                )}
-                {updateError && <FormError>{updateError}</FormError>}
-              </div>
-              <fieldset disabled={updatingPost}>
+              <fieldset className="edit_fieldset" disabled={updatingPost}>
                 <label htmlFor="title" id="title">
                   Tittel
                 </label>
@@ -124,7 +119,6 @@ const Edit = (props) => {
                   defaultValue={post.content.rendered}
                   {...register("content")}
                 />{" "}
-                <SelectImg onSelect={handleImageSelect} />
                 <button className="update_btn" type="submit" value="Submit">
                   Oppdater
                 </button>

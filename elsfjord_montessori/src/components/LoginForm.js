@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
 import Image from "react-bootstrap/Image";
 
 // Images
-import Logo from "../assets/img/Logo_farget.png";
+import Logo from "../assets/img/logo/Logo_farget.png";
 
 // API
 import { apiUrl, TOKEN_PATH } from "../constants/Api";
