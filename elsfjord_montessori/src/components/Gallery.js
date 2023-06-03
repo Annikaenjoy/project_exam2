@@ -7,37 +7,39 @@ import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 
 // Images
-
+import Perler from "../assets/img/perlematerial_web.jpg";
+import Heading from "./Heading";
 const Gallery = (props) => {
   return (
     <>
-      <Container>
+      <Container className="gallery_container" fluid>
+        <Heading>Galleri</Heading>
         <Row>
-          <Col md={3}>
-            <Image src="holder.js/100px250" fluid />
+          <Col className="gallery_col" md={3}>
+            <Image src={Perler} fluid />
           </Col>
-          <Col md={3}>
-            <Image src="holder.js/100px250" fluid />
+          <Col className="gallery_col" md={3}>
+            <Image src={Perler} fluid />
           </Col>
-          <Col md={3}>
-            <Image src="holder.js/100px250" fluid />
+          <Col className="gallery_col" md={3}>
+            <Image src={Perler} fluid />
           </Col>{" "}
-          <Col md={3}>
-            <Image src="holder.js/100px250" fluid />
+          <Col className="gallery_col" md={3}>
+            <Image src={Perler} fluid />
           </Col>
         </Row>
         <Row>
-          <Col md={3}>
-            <Image src="holder.js/100px250" fluid />
+          <Col className="gallery_col" md={3}>
+            <Image src={Perler} fluid />
           </Col>{" "}
-          <Col md={3}>
-            <Image src="holder.js/100px250" fluid />
+          <Col className="gallery_col" md={3}>
+            <Image src={Perler} fluid />
           </Col>{" "}
-          <Col md={3}>
-            <Image src="holder.js/100px250" fluid />
+          <Col className="gallery_col" md={3}>
+            <Image src={Perler} fluid />
           </Col>{" "}
-          <Col md={3}>
-            <Image src="holder.js/100px250" fluid />
+          <Col className="gallery_col" md={3}>
+            <Image src={Perler} fluid />
           </Col>
         </Row>
       </Container>
