@@ -7,7 +7,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 // Images
-import Klippoglim from "../assets/img/Klippoglim_web.jpg";
+import Perler from "../assets/img/perlematerial_web.jpg";
 
 const ApplySection = () => {
   let navigate = useNavigate();
@@ -19,7 +19,7 @@ const ApplySection = () => {
       <Container fluid className="section_container">
         <Row className="justify-content-center align-items-center">
           <Col xs={10} md={12} lg={6}>
-            <img className="section_img" src={Klippoglim} />
+            <img className="section_img" src={Perler} />
           </Col>{" "}
           <Col xs={10} md={12} lg={6}>
             <h2 className="h2_margin">Søknad om skoleplass</h2>
