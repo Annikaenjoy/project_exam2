@@ -1,21 +1,33 @@
 .about_container {
-  height: 100%;
   background-color: $color-background;
   padding: 30px 20px 20px;
+  margin-bottom: 20px;
 }
+
 .teacher_col {
   display: flex;
-  padding: 20px;
+  flex-wrap: wrap;
   margin: 10px;
+  padding: 20px;
   background-color: $color-background;
 }
 .profile_img {
   width: 150px;
 }
 .profile_info {
-  margin: 20px;
-  align-items: center;
+  margin: 20px 0;
+  align-items: left;
 }
 .profile_info p {
   font-size: 14px;
+}
+
+@media (min-width: 463px) {
+  .teacher_col {
+    flex-wrap: nowrap;
+  }
+  .profile_info {
+    margin: 20px;
+    align-items: center;
+  }
 }

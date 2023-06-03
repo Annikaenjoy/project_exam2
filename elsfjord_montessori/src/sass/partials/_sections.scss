@@ -8,16 +8,11 @@
   background-color: $color-background;
   padding: 20px;
 }
-
-.section_col {
-  text-align: end;
-  align-self: center;
-}
 .h2_margin {
   margin-top: 20px;
 }
 .section_img {
-  width: 400px;
+  width: 80%;
 }
 .purple_btn {
   border: none;
@@ -44,4 +39,10 @@
 }
 .about_btn:hover {
   background-color: $color-secondary;
+}
+@media (min-width: 768px) {
+  .section_col {
+    text-align: end;
+    align-self: center;
+  }
 }

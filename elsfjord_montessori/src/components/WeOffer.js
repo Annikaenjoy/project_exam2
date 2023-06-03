@@ -13,7 +13,7 @@ const WeOffer = () => {
     <>
       <Container fluid className="section_container1">
         <Row className="justify-content-center align-items-center">
-          <Col xs={10} lg={6}>
+          <Col xs={10} md={6} lg={6}>
             <h2>Vi tilbyr:</h2>
             <p>
               Flinke lærere, og høy lærertetthet, slik at ditt barn blir sett,
@@ -33,7 +33,7 @@ const WeOffer = () => {
               leksefri skole, så når det er fri, så er det fri.
             </p>
           </Col>
-          <Col className="section_col" xs={10} lg={6}>
+          <Col className="section_col" xs={10} md={6} lg={6}>
             <img className="section_img" src={TallMaterialer} />
           </Col>
         </Row>

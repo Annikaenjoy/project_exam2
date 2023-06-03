@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Image from "react-bootstrap/Image";
 
 // Images
 import Perler from "../assets/img/perlematerial_web.jpg";
@@ -12,16 +13,16 @@ import Perler from "../assets/img/perlematerial_web.jpg";
 const ApplySection = () => {
   let navigate = useNavigate();
   const navigateApply = () => {
-    navigate("/apply");
+    navigate("/skoleplass");
   };
   return (
     <>
       <Container fluid className="section_container">
         <Row className="justify-content-center align-items-center">
-          <Col xs={10} md={12} lg={6}>
-            <img className="section_img" src={Perler} />
+          <Col xs={10} md={6} lg={6}>
+            <Image className="section_img" src={Perler} />
           </Col>{" "}
-          <Col xs={10} md={12} lg={6}>
+          <Col xs={10} md={6} lg={6}>
             <h2 className="h2_margin">Søknad om skoleplass</h2>
             <h4>Søknadsfrist, prosess og antall</h4>
             <p>

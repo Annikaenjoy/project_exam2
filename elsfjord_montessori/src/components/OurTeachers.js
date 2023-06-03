@@ -6,14 +6,19 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 
+// Components
+import Heading from "../components/Heading";
+
+// Images (They have not been able to take photoes yet, that's why I'm only using this as fill for now.)
 import Vegard from "../assets/img/vegardengoy.jpg";
 
 const OurTeachers = (props) => {
   return (
     <>
-      <Container className="section_container">
+      <Container fluid>
+        <Heading>Våre ansatte</Heading>
         <Row className="justify-content-center align-items-center">
-          <Col className="teacher_col" xs={10} lg={5}>
+          <Col className="teacher_col" xs={11} lg={5}>
             <Image className="profile_img" src={Vegard} />
             <div className="profile_info">
               {" "}
@@ -23,7 +28,7 @@ const OurTeachers = (props) => {
               <p>Epost: ida@elsfjordmontessori.no</p>
             </div>
           </Col>
-          <Col className="teacher_col" xs={10} lg={5}>
+          <Col className="teacher_col" xs={11} lg={5}>
             <Image className="profile_img" src={Vegard} />
 
             <div className="profile_info">
@@ -34,7 +39,7 @@ const OurTeachers = (props) => {
               <p>Epost: tanja@elsfjordmontessori.no</p>
             </div>
           </Col>
-          <Col className="teacher_col" xs={10} lg={5}>
+          <Col className="teacher_col" xs={11} lg={5}>
             <Image className="profile_img" src={Vegard} />
 
             <div className="profile_info">
@@ -45,7 +50,7 @@ const OurTeachers = (props) => {
               <p>Epost: vegard@elsfjordmontessori.no</p>
             </div>
           </Col>
-          <Col className="teacher_col" xs={10} lg={5}>
+          <Col className="teacher_col" xs={11} lg={5}>
             <Image className="profile_img" src={Vegard} />
 
             <div className="profile_info">
