@@ -54,6 +54,7 @@ label {
   font-size: 14px;
   width: 90%;
   padding: 10px;
+  border-radius: none;
 }
 .post_group {
   display: inline-flex;
@@ -68,16 +69,14 @@ label {
   font-family: $font-primary;
   font-size: 14px;
   border: 1px solid $color-black;
+  border-radius: none;
 }
-.birthday {
-  padding: 10px;
-  border: 1px solid $color-black;
-  width: 90%;
-}
+
 .form_h2 {
   margin-top: 20px;
   font-family: $font-primary;
 }
+
 .apply_btn {
   width: 90%;
   padding: 10px;

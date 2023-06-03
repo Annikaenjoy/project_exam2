@@ -527,6 +527,7 @@ const ApplyForm = (props) => {
                   <legend>Samtykke</legend>
                   <section className="class">
                     <input
+                      className="checkbox"
                       type="checkbox"
                       id="consent"
                       name="consent"
