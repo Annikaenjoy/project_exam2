@@ -36,7 +36,7 @@ const CreatePost = (props) => {
     resolver: yupResolver(schema),
   });
 
-  async function onSubmit(data) {
+  const onSubmit = async (data) => {
     setSubmitting(true);
     setServerError(null);
 
@@ -48,17 +48,15 @@ const CreatePost = (props) => {
 
     try {
       const response = await http.post("wp/v2/posts", data);
-      console.log("response", response.data);
       setTimeout(() => {
         window.location.reload();
       }, 500);
     } catch (error) {
-      console.log("error", error);
       setServerError(error.toString());
     } finally {
       setSubmitting(false);
     }
-  }
+  };
 
   return (
     <>
@@ -91,7 +89,7 @@ const CreatePost = (props) => {
                 <div>
                   <SelectImg register={register} />
                 </div>
-                <button className="post_btn">
+                <button className="post_btn" type="submit">
                   {submitting ? "Publiserer..." : "Publiser"}
                 </button>
               </fieldset>

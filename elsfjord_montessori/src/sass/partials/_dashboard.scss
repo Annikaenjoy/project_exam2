@@ -85,7 +85,8 @@ hgroup {
 .delete_button:hover {
   color: $color-secondary;
 }
-.error_delete {
+.error_delete,
+.error_img {
   font-family: $font-primary;
   font-size: 12px;
   color: #ff0000;

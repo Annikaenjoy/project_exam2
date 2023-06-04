@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import { useState } from "react";
 import useAxios from "../../hooks/useAxios";
-import { useNavigate } from "react-router-dom";
 
 // Icons
 import { FaTrashAlt } from "react-icons/fa";

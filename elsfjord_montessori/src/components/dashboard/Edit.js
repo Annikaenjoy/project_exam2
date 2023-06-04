@@ -12,7 +12,6 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 // Components
-import SelectImg from "./SelectImg";
 import SinglePost from "../SinglePost";
 
 import { BoxesLoaderComponent } from "../Loader";
@@ -43,10 +42,9 @@ const Edit = (props) => {
   const url = `wp/v2/posts/${id}`;
 
   useEffect(() => {
-    async function getPost() {
+    const getPost = async () => {
       try {
         const result = await http.get(url);
-        console.log("result", result.data);
         setPost(result.data);
       } catch (error) {
         console.log(error);
@@ -54,7 +52,7 @@ const Edit = (props) => {
       } finally {
         setFetchingPost(false);
       }
-    }
+    };
     getPost();
   }, []);
 
@@ -63,18 +61,14 @@ const Edit = (props) => {
     setUpdateError(null);
     setUpdated(false);
 
-    console.log(data);
-
     try {
-      const response = await http.put(url, data);
-      console.log("response", response.data);
+      await http.put(url, data);
       setUpdated(true);
       setTimeout(() => {
         window.location.reload();
       }, 500);
     } catch (error) {
       setUpdateError(error.toString());
-      console.log("error", error);
     } finally {
       setUpdatingPost(false);
     }

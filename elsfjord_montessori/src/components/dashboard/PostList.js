@@ -14,13 +14,12 @@ const PostList = (props) => {
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
 
-  async function getPosts() {
+  const getPosts = async () => {
     try {
       setIsError(false);
       setIsLoading(true);
       const response = await fetch(newUrl);
       const result = await response.json();
-      console.log(result);
 
       setPosts(result);
       setIsLoading(false);
@@ -28,7 +27,7 @@ const PostList = (props) => {
       setIsLoading(false);
       setIsError(true);
     }
-  }
+  };
   useEffect(() => {
     getPosts();
   }, []);
@@ -38,7 +37,7 @@ const PostList = (props) => {
   }
 
   if (isError) {
-    return <div>An error occurred when calling the API</div>;
+    return <div>Error! Kunne ikke hente data fra API..</div>;
   }
 
   return (
