@@ -62,7 +62,8 @@ Please make sure to read the relevant section before making your contribution. I
 ## Acknowledgments
 
 - useEffect axios:  https://www.freecodecamp.org/news/how-to-use-axios-with-react/
-  get featured_media:  https://dalenguyen.medium.com/how-to-get-featured-image-from-wordpress-rest-api-5e023b9896c6
+
+- get featured_media:  https://dalenguyen.medium.com/how-to-get-featured-image-from-wordpress-rest-api-5e023b9896c6
 
 - useLocalStorage.js: useHooks.com
 
