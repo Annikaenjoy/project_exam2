@@ -1,6 +1,6 @@
 # project_exam2
 
-![image](./src//assets/img/Website_img.png)
+![Screenshot of website when running](./src//assets/img/Website_img.png)
 
 ## Description
 
@@ -49,7 +49,9 @@ npm run start
 ## Contributing
 
 Thank you for taking the time to contribute!
-Please make sure to read the relevant section before making your contribution. It will make it a lot easier for us maintainers and smooth out the experience for all involved.
+Read the relevant section before making your contribution. It will make it a lot easier for us maintainers and smooth out the experience for all involved.
+
+Please make sure to use open a pull request so code can be reviewed. If you don't know how, follow this step by step guide: https://opensource.com/article/19/7/create-pull-request-github
 
 > ### Legal Notice
 >
@@ -63,8 +65,8 @@ Please make sure to read the relevant section before making your contribution. I
 
 - useEffect axios:  https://www.freecodecamp.org/news/how-to-use-axios-with-react/
 
-- get featured_media:  https://dalenguyen.medium.com/how-to-get-featured-image-from-wordpress-rest-api-5e023b9896c6
+- get featured_media:   https://dalenguyen.medium.com/how-to-get-featured-image-from-wordpress-rest-api-5e023b9896c6
 
-- useLocalStorage.js: useHooks.com
+- useLocalStorage.js:  https://www.useHooks.com
 
 This guide is based on the **contributing.md**. [Make your own](https://contributing.md/)!
